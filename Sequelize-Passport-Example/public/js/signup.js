@@ -44,8 +44,10 @@ $(document).ready(function() {
   var usernameInput = $("input#userName");
 
    var imgInput = "/img/testAvatar.png";
-   var inputColor=$("input#updateColor");
-   var updateColor="#"+inputColor.val().trim();
+   var inputColor=$("input#updateColor").val();
+   console.log(inputColor);
+   var updateColor="#"+inputColor;
+   var updateArr=[];
    //var updateUser=usernameInput.val().trim();
 
 
@@ -57,13 +59,13 @@ $(document).ready(function() {
     //grabbing current user to update their info
    console.log(useremail);
    //var to update
-  console.log(updateUser);
+  //console.log(updateUser);
    console.log(imgInput);
    console.log(updateColor);
 
    var updateData = 
    {
-      userName: updateUser, 
+      //userName: updateUser, 
       avatar_image:imgInput,
       message_color: updateColor,
       email: useremail,
@@ -72,31 +74,41 @@ $(document).ready(function() {
 
     updateUserInfo(updateData);
 
-
-
-
-
-
-   
-
    //updateUserInfo(updateUser, imgInput, updateColor);
   });
 
-   function updateUserInfo(update)
-   {
+function updateUserInfo(update)
+{
+  $.ajax({
+      method: "PUT",
+      url: "/api/update/",
+      data: update
+    }).then(getUpdate);
+}
 
-    //console.log("inside update user: "+ username + " "+ img+ " "+ color);
-   //console.log(id);
- $.get("/api/update/", update)
-   // On success, run the following code
-   .then(function (updateData) {
-     // Log the data we found
+ // This function grabs todos from the database and updates the view
+  function getUpdate() {
+    $.get("/api/update/", function(data) {
+      updateArr = data;
 
-     console.log("updated");
-     location.reload();
+    });
+  }
+ //   {
+ //   function updateUserInfo(update)
+ //   {
+ //    console.log("updating");
+ //    //console.log("inside update user: "+ username + " "+ img+ " "+ color);
+ //   //console.log(id);
+ // $.get("/api/update/", update)
+ //   // On success, run the following code
+ //   .then(function (updateData) {
+ //     // Log the data we found
 
-   });
-   }
+ //     console.log("updated");
+ //     location.reload();
+
+ //   });
+ //   }
 
 
 });

@@ -54,37 +54,49 @@ module.exports = function(app) {
     }
   });
 
- app.get("/api/update", function (req, res) {
-  db.Login.update({
-      userName: req.body.userName,
+//  app.get("/api/update", function (req, res) {
+//   db.Login.update({
+//       userName: req.body.userName,
+//    avatar_image: req.body.avatar_image,
+//    message_color: req.body.message_color
+//   }, {
+//     where: {
+//       email: req.body.email
+//     }
+//   }).then(function (results) {
+
+//     res.json(results);
+//   });
+
+
+// });
+
+// GET route for getting all of the todos
+  app.get("/api/update", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.User.findAll({}).then(function(dbTodo) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbTodo);
+    });
+  });
+
+app.put("/api/update/", function (req, res) {
+  console.log("doing the in api routes update");
+  db.User.update({
+      //userName: req.body.userName,
    avatar_image: req.body.avatar_image,
-   message_color: req.body.message_color
+   message_color: req.body.message_color,
+   logged: true
   }, {
     where: {
       email: req.body.email
     }
-  }).then(function (results) {
-
-    res.json(results);
+  }).then(function (getUpdate) {
+    console.log("Updated!!!");
+    res.json(getUpdate);
   });
 
 
 });
-
-  // update user info
- app.get("/api/update/:username", function (req, res) {
-   db.User.update({
-     userName: username
-   }, {
-     where: {
-       id: req.params.username
-     }
-   }).then(function (results) {
-
-     res.json(results);
-   });
-
-
- });
 
 };
