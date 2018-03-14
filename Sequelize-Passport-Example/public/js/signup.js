@@ -1,32 +1,39 @@
 $(document).ready(function() {
   // Getting references to our form and input
   var signUpForm = $("form.signup");
+  var usernameInput =$("input#username-input");
+  //var usernameInput ="defaultName";
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
     event.preventDefault();
+    //forgot need to add true for logged : logged: true
     var userData = {
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+      userName: usernameInput.val(),
     };
 
-    if (!userData.email || !userData.password) {
+    if (!userData.email || !userData.password ) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password, userData.userName);
     emailInput.val("");
     passwordInput.val("");
+    usernameInput.val("");
+
   });
 
   // Does a post to the signup route. If succesful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password) {
+  function signUpUser(email, password, userName) {
     $.post("/api/signup", {
       email: email,
-      password: password
+      password: password,
+      userName:userName
     }).then(function(data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a boostrap alert
@@ -41,14 +48,16 @@ $(document).ready(function() {
 ///update user
 // Getting references to our form and input
   var updateForm = $("form.update");
-  var usernameInput = $("input#userName");
+  //need to get the correct defaultname
+  var updatenameInput = $("input#userName").val();
 
    var imgInput = "/img/testAvatar.png";
    var inputColor=$("input#updateColor").val();
-   console.log(inputColor);
+   //console.log(inputColor);
    var updateColor="#"+inputColor;
    var updateArr=[];
-   //var updateUser=usernameInput.val().trim();
+   var updateUser=updatenameInput;
+   //var updateUser="bob";
 
 
   
@@ -59,13 +68,13 @@ $(document).ready(function() {
     //grabbing current user to update their info
    console.log(useremail);
    //var to update
-  //console.log(updateUser);
+  console.log(updateUser);
    console.log(imgInput);
    console.log(updateColor);
 
    var updateData = 
    {
-      //userName: updateUser, 
+      userName: updateUser, 
       avatar_image:imgInput,
       message_color: updateColor,
       email: useremail,

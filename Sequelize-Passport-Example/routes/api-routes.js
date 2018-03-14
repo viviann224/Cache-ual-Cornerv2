@@ -18,9 +18,11 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     console.log(req.body);
+    console.log("username in api route: "+req.body.userName);
     db.User.create({
       email: req.body.email,
       password: req.body.password,
+      userName: req.body.userName,
       avatar_image: "defaultImg",
       message_color: "000000"
     }).then(function() {
@@ -86,6 +88,7 @@ app.put("/api/update/", function (req, res) {
       //userName: req.body.userName,
    avatar_image: req.body.avatar_image,
    message_color: req.body.message_color,
+   userName: req.body.userName,
    logged: true
   }, {
     where: {
