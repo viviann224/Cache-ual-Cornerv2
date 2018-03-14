@@ -1,4 +1,5 @@
-$(document).ready(function() {
+$(document).ready(function() 
+{
   // Getting references to our form and input
   var signUpForm = $("form.signup");
   var usernameInput =$("input#username-input");
@@ -45,36 +46,37 @@ $(document).ready(function() {
     $("#alert").fadeIn(500);
   }
 
-///update user
+
+
+
+  
 // Getting references to our form and input
   var updateForm = $("form.update");
+   updateForm.on("submit", function(event) 
+   {
+    ///update user
+
   //need to get the correct defaultname
-  var updatenameInput = $("input#userName").val();
+  var updatenameInput = $("#updateUserName").val();
 
    var imgInput = "/img/testAvatar.png";
    var inputColor=$("input#updateColor").val();
    //console.log(inputColor);
-   var updateColor="#"+inputColor;
+   var updateColor=inputColor;
    var updateArr=[];
    var updateUser=updatenameInput;
    //var updateUser="bob";
-
-
-  
-
-   updateForm.on("submit", function(event) 
-   {
     event.preventDefault();
     //grabbing current user to update their info
    console.log(useremail);
    //var to update
-  console.log(updateUser);
+  console.log(updatenameInput);
    console.log(imgInput);
    console.log(updateColor);
 
    var updateData = 
    {
-      userName: updateUser, 
+      userName: updatenameInput, 
       avatar_image:imgInput,
       message_color: updateColor,
       email: useremail,
