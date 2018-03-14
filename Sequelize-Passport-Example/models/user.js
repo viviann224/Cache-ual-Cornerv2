@@ -25,8 +25,11 @@ module.exports = function(sequelize, DataTypes) {
     avatar_image: {
       type: DataTypes.BLOB('tiny')
     },
-    message_color : DataTypes.STRING,
 
+    message_color :{ 
+      type:DataTypes.STRING,
+    defaultValue: "#000000"
+    },
     logged: {
       type: DataTypes.BOOLEAN, 
       defaultValue:false
@@ -38,11 +41,11 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
- //    User.associate = function(models) {
- //   User.hasMany(models.Chat, {
- //     onDelete: "cascade"
- //   });
- // };
+    User.associate = function(models) {
+   User.hasMany(models.Chat, {
+      onDelete: "cascade"
+   });
+  };
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function(password) {
     return bcrypt.compareSync(password, this.password);

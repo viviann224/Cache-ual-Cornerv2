@@ -3,13 +3,13 @@
 /*html elements*/
 	html {
 		min-height: 100vh;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(30, 100%, 50%);
 	}
 
 	body {
 		min-height: 100vh;
 		font-size: 15px;
-		background-color:hsl(45, 100%, 65%);
+		background-image: url("../../img/starsBackground.png");
 	}
 
 /*modal*/
@@ -52,6 +52,8 @@
 		background: cyan;
 	}
 
+	
+
 /*chat container*/
 	.chatWrapper {
 		min-height: 100vh;
@@ -89,12 +91,21 @@
 
 	#chatArea {
 		grid-area: chatarea;
-		/*background-color: white;*/
+		border-width: 20px;
+		border-style: solid;
+		/*border-color: hsl(30, 100%, 50%);*/
+		border-image: url(../../img/candyCorn.png) repeat 50;
+		margin-right: 10px;
+		background-color:hsla(0, 0%, 15%, 0.5);
 	}
 
 	.chatMessage {
 		margin-top: 1%;
 		line-height: 1.25em;
+	}
+
+	#messages{
+		color: 	hsl(30, 100%, 50%);
 	}
 
 	#userArea {
@@ -131,23 +142,24 @@
 
 	h1 {
 		font-size: 3em;
-		color: 	hsl(0, 100%, 30%);
-		font-family: "Bauhaus 93", sans-serif;
+		color: 	hsl(30, 100%, 50%);
+		font-family: 'Creepster', cursive;
+		/*font-family: "Bauhaus 93", sans-serif;*/
 
 	}
 
 	h2 {
 		font-size: 2em;
-		color: 	hsl(0, 100%, 30%);
-		font-family: "Bauhaus 93", sans-serif;
+		color: 	hsl(30, 100%, 50%);
+		font-family: "Creepster", cursive;
 	}
 
 	h3 {
 		font-size: 1.5em;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(30, 100%, 50%);
 	}
 
 	h6 {
 		font-size: 0.75em;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(30, 100%, 50%);
 	}

@@ -4,13 +4,16 @@ var bodyParser = require("body-parser");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
-
+var app = express();
 // Setting up port and requiring models for syncing
 var PORT = process.env.PORT || 8080;
 var db = require("./models");
 
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
 // Creating express app and configuring middleware needed for authentication
-var app = express();
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(express.static("public"));
@@ -28,7 +31,7 @@ require("./routes/chat-api-routes.js")(app);
 //require("./routes/login-api-routes.js")(app);
 //require("./routes/html-routes.js")(app);
 
-
+/*
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ }).then(function() {
   server=app.listen(PORT, function() {
@@ -48,4 +51,33 @@ db.sequelize.sync({ }).then(function() {
 
 });
   });
+});*/
+
+//newest update
+// Starts the server to begin listening
+// =============================================================
+
+db.sequelize.sync({
+  // force: true
+}).then(function () {
+  server.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+
+  });
+});
+
+// socket connection and disconnect 
+// =============================================================
+
+io.on('connection', function (socket) {
+  console.log('user connected ' + socket.id);
+
+  socket.on('chat message', function (msg) {
+    io.emit('chat message', msg);
+  });
+
+  socket.on('disconnect', function () {
+    console.log('user disconnected   ' + socket.id);
+  });
+
 });

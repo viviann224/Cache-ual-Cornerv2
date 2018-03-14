@@ -9,7 +9,7 @@
 	body {
 		min-height: 100vh;
 		font-size: 15px;
-		background-color:hsl(45, 100%, 65%);
+		background-color:hsl(170, 100%, 65%);
 	}
 
 /*modal*/
@@ -90,11 +90,27 @@
 	#chatArea {
 		grid-area: chatarea;
 		/*background-color: white;*/
+		border-width: 20px;
+		border-style: solid;
+		border-color: hsl(45, 100%, 70%);
+		/*border-image:url(../../img/sun1.png);*/
+		background-color:hsl(40, 100%, 90%);
+		background-image: url("../../img/hawiian3.png");
+		margin-right: 10px;
+		color: 	hsl(90, 100%, 50%);
+		
+		/*background-color:hsl(170, 100%, 65%);*/
 	}
 
 	.chatMessage {
 		margin-top: 1%;
 		line-height: 1.25em;
+	}
+
+	#messages {
+	/*color: hsl(170, 100%, 65%);*/
+	/*MESSAGE TEXT COLOR WON'T CHANGE HERE EITHER*/
+
 	}
 
 	#userArea {
@@ -131,23 +147,23 @@
 
 	h1 {
 		font-size: 3em;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(30, 80%, 40%);
 		font-family: "Bauhaus 93", sans-serif;
 
 	}
 
 	h2 {
 		font-size: 2em;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(30, 80%, 40%);
 		font-family: "Bauhaus 93", sans-serif;
 	}
 
 	h3 {
 		font-size: 1.5em;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(90, 100%, 50%);
 	}
 
 	h6 {
 		font-size: 0.75em;
-		color: 	hsl(0, 100%, 30%);
+		color: 	hsl(90, 100%, 50%);
 	}
