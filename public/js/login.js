@@ -16,6 +16,7 @@ $(document).ready(function() {
       return;
     }
 
+    login();
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.email, userData.password);
     emailInput.val("");
@@ -34,5 +35,30 @@ $(document).ready(function() {
       console.log(err);
     });
   }
+
+  function login() {
+  localStorage.clear();
+  //get the user email, store in local storage
+  var email = $("#email-input").val().trim();
+  localStorage.setItem("Cache-ual-Corner", email);
+  $('#email').val('');
+
+  /// do the update for logged= true
+}
+
+
+//on Login button click
+  // $('#btnLogin').on("click", function () {
+  //   event.preventDefault();
+  //   login();
+
+  // });
+
+  // //on Signup button click
+  // $('#btnSignup').on("click", function () {
+  //   event.preventDefault();
+  //   login();
+
+  // });
 
 });

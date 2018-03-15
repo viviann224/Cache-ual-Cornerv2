@@ -65,6 +65,6 @@ This project is licensed under GitHub.
 
 
 **ACKNOWLEDGMENTS**:
-All rights are reserved to Vivian Tuong Nguyen, Will McCrory, Priya Ammaiyappan, Sergey Sambros, Vivian Tuong Nguyen. Do not alter or manipulate content and images from the authors listed above.
+All rights are reserved to Vivian Tuong Nguyen, Will McCrory, Priya Ammaiyappan, Sergey Sambros, Dennis Markham. Do not alter or manipulate content and images from the authors listed above.
 Copyright   :copyright: 2018
 
