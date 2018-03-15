@@ -1,57 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/menuStyles.css" type="text/css" />
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <title>Update your info</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
+  </head>
 
-<head>
-  <title>Passport Authentication</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
-</head>
+  <body>
 
-<body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+    <h1>Update user information</h1>
 
-      </div>
-    </div>
-  </div>
-  <br>
-    <br>
     <form class="update">
-    <a href="#"></a>
-    <br>Update User info!
-    <input id="updateUserName" type="text" placeholder="guest123" >
-    <br>for now default img but place divs of avitar for users to pick
-     <br><img id="img" src="/img/testAvatar.png">
+      <input type="text" id="userName" placeholder="Your new username">
 
-    <br>message color: drop down of color will default for now
-    <br><input id="updateColor" type="string" value="ffffff">
-             
-           
-      <br><button name="updateAcct" type="submit">update account</button>
+      <div>
+        <input type="radio" name="img" value="image1.png">Test
+        <input type="radio" name="img" value="image2.png">Test
+        <input type="radio" name="img" value="image3.png">Test
+        <input type="radio" name="img" value="image4.png">Test
+        <input type="radio" name="img" value="image5.png">Test
+      </div>
 
-      
+      <input type="color" id="updateColor" value="#ff0000"><h2>Change your font color</h2>
+        <br>
+
+      <button name="updateAcct" type="submit">Submit</button>
     </form>
 
-    
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
+    <footer>
+       <script type="text/javascript" src="js/members.js"></script>
+        <script type="text/javascript" src="js/signup.js"></script>
+    </footer>
 
-  
-
-</body>
+  </body>
 
 </html>

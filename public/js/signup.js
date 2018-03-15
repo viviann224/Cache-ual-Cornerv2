@@ -60,31 +60,27 @@ $(document).ready(function()
   var updatenameInput = $("#updateUserName").val();
 
    var imgInput = "/img/testAvatar.png";
-   var inputColor=$("input#updateColor").val();
+   var inputColor=$("#updateColor").val();
    //console.log(inputColor);
    var updateColor=inputColor;
    var updateArr=[];
    var updateUser=updatenameInput;
+       console.log($("#userName").val());
    //var updateUser="bob";
     event.preventDefault();
     //grabbing current user to update their info
-   console.log(useremail);
-   //var to update
-  console.log(updatenameInput);
-   console.log(imgInput);
-   console.log(updateColor);
 
    var updateData = 
    {
-      userName: updatenameInput, 
-      avatar_image:imgInput,
-      message_color: updateColor,
+      userName: $("#userName").val(), 
+      avatar_image:$("input:radio[name ='img']:checked").val(),
+      message_color: $("#updateColor").val(),
       email: useremail,
       logged: true
     };
 
     updateUserInfo(updateData);
-
+    console.log(updateData)
    //updateUserInfo(updateUser, imgInput, updateColor);
   });
 
