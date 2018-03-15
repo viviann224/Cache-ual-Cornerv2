@@ -75,7 +75,7 @@ $(function () {
   if (socket) {
     //get the message from socket back to client
     socket.on('chat message', function (msg) {
-      $('#currentMsg').append("<p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p>");
+      $('#chatMessages').append("<div class='chatMessage'><p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p></div>");
       window.scrollTo(0, document.body.scrollHeight);
     });
   }
