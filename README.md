@@ -30,14 +30,13 @@ CACHE-ual CORNER accommodates logged members in a chat session. Sign up is free 
 - Perfered viewing in English language :us:
 
 **HOW TO USE**:
-Once pages loads, the user will need to sign up if the member does not have a memebership
 
 New Members | Members
 ------------ | -------------
-**Sign up:** direct to the signup page to create an account |  **Sign up:** Not needed. Account is in the system
+**Sign up:** Direct to the signup page to create an account |  **Sign up:** Not needed. Account is in the system
 **Members Page:** User can start the chat or update their settings | **Members Page:** User can start the chat or update their settings
 **Settings:** User can update username, avatar, and / or font color  | **Settings::** User can update username, avatar, and / or font color
-**Logout** User can end scession by clicking the logout button | **Logout** User can end scession by clicking the logout button
+**Logout** User can end session by clicking the logout button | **Logout** User can end session by clicking the logout button
 
 **BUILT WITH**:
 - Sublime Text

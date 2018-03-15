@@ -75,7 +75,7 @@ $(function () {
   if (socket) {
     //get the message from socket back to client
     socket.on('chat message', function (msg) {
-      $('#currentMsg').append("<p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p>");
+      $('#chatMessages').append("<div class='chatMessage'><p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p></div>");
       window.scrollTo(0, document.body.scrollHeight);
     });
   }
@@ -87,7 +87,6 @@ $.get("/api/all", function (data) {
   console.log(data);
   for (var i = 0; i < data.length; i++) {
     $('#chatMessages').append("<div class='chatMessage'><p>" + data[i].User.userName + "  " + data[i].chat_messages + "   " + moment(data[i].chat_time).format('h:mm a') + "</p></div>");
-
   }
 });
 
