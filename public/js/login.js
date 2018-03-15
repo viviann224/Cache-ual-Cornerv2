@@ -16,7 +16,8 @@ $(document).ready(function() {
       return;
     }
 
-    login();
+    login()
+    
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.email, userData.password);
     emailInput.val("");
@@ -62,3 +63,12 @@ $(document).ready(function() {
   // });
 
 });
+
+
+  function login() {
+    localStorage.clear();
+
+    var email=$("#email-input").val().trim();
+    localStorage.setItem("Cache-ual-Corner", email);
+    $("#email").val("");
+  }

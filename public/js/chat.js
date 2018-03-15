@@ -91,7 +91,7 @@ $.get("/api/all", function (data) {
 });
 
 // Make a get request to our api route that will return all the logged users
-$.get("/api/users", function (data) {
+$.get("/api/users", function (data) {s
 
   for (var i = 0; i < data.length; i++) {
     $('#userList').append("<li>" + data[i].userName + "</li>");
