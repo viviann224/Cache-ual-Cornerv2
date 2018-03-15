@@ -84,9 +84,9 @@ $(function () {
 
 // Make a get request to our api route that will return every chat
 $.get("/api/all", function (data) {
-
+  console.log(data);
   for (var i = 0; i < data.length; i++) {
-    $('#messages').append("<p>" + data[i].User.userName + "  " + data[i].chat_messages + "   " + moment(data[i].chat_time).format('h:mm a') + "</p>");
+    $('#chatMessages').append("<div class='chatMessage'><p>" + data[i].User.userName + "  " + data[i].chat_messages + "   " + moment(data[i].chat_time).format('h:mm a') + "</p></div>");
 
   }
 });
