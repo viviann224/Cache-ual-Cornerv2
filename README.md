@@ -5,9 +5,11 @@ The program should run automatically.
 If the program is not running automatically, please make sure you have all the prerequisites listed below.
 
 **STATEMENT OF PURPOSE**:
-CACHE-ual CORNER is a communication application created to help  connect, quickly transmit, and express ideas in one common chatroom. Whether it is to discover that there are other people who share the same ideas or to spread new topics that have just occured CACHE-ual CORNER is a place to discuss.
+CACHE-ual CORNER is a communication application created to help  connect, quickly transmit, and express ideas in one common chatroom. Whether it is to discover that there are other people who share the same ideas or to spread new topics that have just occurred CACHE-ual CORNER is a place to discuss.
 
-The idea became reality when a group of people sparked intrest into revamping retro style chatting systems to the modern day world. CACHE-ual CORNER has a nostalogic feel of all the best chatting systems of the past, ICQ, AIM, and Yahoo! to be revived  and with font colors and avatars! Whether you want to learn more about that chatting time period or relive those glory days CACHE-ual CORNER is for you!
+
+The idea became reality when a group of people sparked interest into revamping retro style chatting systems to the modern day world. CACHE-ual CORNER has a nostalgic feel of all the best chatting systems of the past, ICQ, AIM, and Yahoo! to be revived into CACHE-ual CORNER with font colors and avatars! Whether you want to learn more about that chatting time period or relive those glory days CACHE-ual CORNER is for you!
+
 
 CACHE-ual CORNER was created to showcases the use of Node, Express, MySQL, Model View Controller design pattern, Sequelize,  HTML, CSS, jQuery, JavaScript, user validation, and deployment via Heroku.
 
@@ -28,7 +30,14 @@ CACHE-ual CORNER accommodates logged members in a chat session. Sign up is free 
 - Perfered viewing in English language :us:
 
 **HOW TO USE**:
+Once pages loads, the user will need to sign up if the member does not have a memebership
 
+New Members | Members
+------------ | -------------
+**Sign up:** direct to the signup page to create an account |  **Sign up:** Not needed. Account is in the system
+**Members Page:** User can start the chat or update their settings | **Members Page:** User can start the chat or update their settings
+**Settings:** User can update username, avatar, and / or font color  | **Settings::** User can update username, avatar, and / or font color
+**Logout** User can end scession by clicking the logout button | **Logout** User can end scession by clicking the logout button
 
 **BUILT WITH**:
 - Sublime Text
@@ -42,7 +51,7 @@ CACHE-ual CORNER accommodates logged members in a chat session. Sign up is free 
 - Google fonts
 
 **VERSION**:
-This is the first version of CACHE-ual CORNER
+This is the second version of CACHE-ual CORNER
 
 **LICENSE**:
 This project is licensed under GitHub.
@@ -56,6 +65,6 @@ This project is licensed under GitHub.
 
 
 **ACKNOWLEDGMENTS**:
-All rights are reserved to Vivian Tuong Nguyen, Will McCrory, Priya Ammaiyappan, Sergey Sambros, Dennis Markham. Do not alter or manipulate content and images from the authors listed above.
+All rights are reserved to Vivian Tuong Nguyen, Will McCrory, Priya Ammaiyappan, Sergey Sambros, Vivian Tuong Nguyen. Do not alter or manipulate content and images from the authors listed above.
 Copyright   :copyright: 2018
 
