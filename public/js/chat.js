@@ -1,5 +1,5 @@
 //on successful login/sign up
-function login() {
+/*function login() {
   localStorage.clear();
   //get the user email, store in local storage
   var email = $("#email").val().trim();
@@ -7,14 +7,14 @@ function login() {
   $('#email').val('');
 
   /// do the update for logged= true
-}
+}*/
 
 $(function () {
 
   //socket gets created 
   var socket = io();
   var chat_time = new Date();
-  
+  /*
   //on Login button click
   $('#btnLogin').on("click", function () {
     event.preventDefault();
@@ -28,7 +28,7 @@ $(function () {
     login();
 
   });
-
+*/
   //on LogOut button click
   $('#btnLogout').on("click", function () {
     event.preventDefault();
@@ -84,11 +84,11 @@ $(function () {
 
 // Make a get request to our api route that will return every chat
 $.get("/api/all", function (data) {
-/*
+
   for (var i = 0; i < data.length; i++) {
     $('#messages').append("<p>" + data[i].User.userName + "  " + data[i].chat_messages + "   " + moment(data[i].chat_time).format('h:mm a') + "</p>");
 
-  }*/
+  }
 });
 
 // Make a get request to our api route that will return all the logged users
