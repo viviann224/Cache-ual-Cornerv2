@@ -2,29 +2,32 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
-		<!-- <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" /> -->
-		<link rel="stylesheet" href="/stylesheets/skins/dennis/Christmas.css" type="text/css" />
-		<!--jquery-->
-		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<title>Cache-ual Corner</title>
 		<link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
+
+		<link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
+		<link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 	</head>
 
 	<body>
 		<div class="chatWrapper">
 			<div class="chatElement" id="header">
+
 				<h1>Cache-ual Corner</h1>
+
 			</div>
 
 			<div class="chatElement" id="sideBar">
+
 				<h2>h2: Users</h2>
+
 				<div id="userList">
-					<ul>
-					</ul>
+					<ul></ul>
 				</div>
 
 				<h2>h2: Chatrooms</h2>
+
 				<div id="roomList">
 					<ul>
 						<li>li: Room one</li>
@@ -32,18 +35,13 @@
 						<li>li: Room three</li>
 					</ul>
 				</div>
+
 			</div>
 
 			<div class="chatElement" id="chatArea">
-				<!-- <div id="chatName">
-					<h2>Chatroom</h2>
-				</div> -->
 				
-				<div id="chatMessages">
-					<div class="chatMessage">
-						<h5 id="messages"></h5>
-					</div>
-				</div>
+				<div id="chatMessages"></div>
+
 			</div>
 
 			<div class="chatElement" id="userArea">
@@ -55,14 +53,11 @@
 				<div id="userInfo">
 					<img src="/img/testAvatar.png"/>
 
-					<h3>h3: Username</h3>
+					<h3 id="userName"></h3>
 
 					<div id="settingsModal">
-						<h6>h6: Settings</h6>
-					</div>
-
-					<div id="skinModal">
-						<h6>h6: Change skin</h6>
+						<h6><a href="/update">Settings / Skins</a></h6>
+						<h6 id="logout">Logout</h6>
 					</div>
 
 				</div>
@@ -71,10 +66,11 @@
 
 		<footer>
 			<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>    
-			<script src="https://code.jquery.com/jquery.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>  
+			<script src="/js/members.js"></script>  
 			<script src="/js/main.js"></script>
 			<script src="/js/chat.js"></script>
+			<script src="/js/updateWill.js"></script>
 		</footer>
 	</body>
 

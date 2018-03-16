@@ -23,7 +23,8 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue:"guest123"
     },
     avatar_image: {
-      type: DataTypes.BLOB('tiny')
+      type: DataTypes.STRING,
+      defaultValue:"../img/avatar/avatar1.jpg"
     },
 
     message_color :{ 

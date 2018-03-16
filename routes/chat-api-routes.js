@@ -10,11 +10,12 @@ module.exports = function (app) {
       attributes: ['chat_messages', 'chat_time'],
       include: [{
         model: db.User,
-        attributes: ['userName']
+        attributes: ['userName', 'message_color', 'avatar_image']
       }],
       order: [
         ['id', 'ASC']
-      ]
+      ],
+      limit: 20
 
     }).then(function (results) {
       res.json(results);
@@ -25,7 +26,7 @@ module.exports = function (app) {
   app.get("/api/user/:email", function (req, res) {
     //select  username, id  from login table for the given email id and logged true
     db.User.findOne({
-      attributes: ['userName', 'id'],
+      attributes: ['userName', 'id', 'message_color', 'avatar_image'],
       where: {
         email: req.params.email
         /*logged: true*/

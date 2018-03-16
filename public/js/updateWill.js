@@ -6,7 +6,7 @@ $("form.update").on("submit", function(event)
 		userName: $("#userName").val().trim(), 
 		avatar_image:$("input:radio[name ='img']:checked").val(),
 		message_color: $("#updateColor").val(),
-		email:useremail,
+		email: localStorage.getItem("Cache-ual-Corner"),
 		logged: true
 	}
 
@@ -33,8 +33,15 @@ function getUpdate() {
 //logout setting logged state to false
 //you need to update login button name from
 //.navbar-brand to NEW
-$(".navbar-brand").on("click", function(event)
+$("#logout").on("click", function(event)
 {
+	console.log("Click");
+
+	var useremail = localStorage.getItem("Cache-ual-Corner");
+	// localStorage.removeItem("Cache-ual-Corner");
+	// socket.disconnect();
+
+	console.log(useremail);
 
 	var signoutData =
 	{

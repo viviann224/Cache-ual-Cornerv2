@@ -23,7 +23,7 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password,
       userName: req.body.userName,
-      avatar_image: "defaultImg",
+      avatar_image: "../img/avatar/avatar1.jpg",
       message_color: "000000",
       logged: true
     }).then(function() {
@@ -40,7 +40,7 @@ module.exports = function(app) {
   {
     console.log("last logout");
     req.logout();
-    res.redirect("/");
+    // res.redirect("/");
   });
 
   // Route for getting some data about our user to be used client side
