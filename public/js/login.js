@@ -31,6 +31,7 @@ $(document).ready(function() {
     $.post("/api/login", {
       email: email,
       password: password
+
     }).then(function(data) {
       window.location.replace(data);
       // If there's an error, log the error
@@ -52,6 +53,25 @@ $(document).ready(function() {
     data: loginData
   }).then(getUpdate);
   console.log(getUpdate);
+  }
+
+  function updateLogState(email) 
+  {
+    console.log(email);
+//update logged state to true
+    var updatelog=
+    {
+      email:email
+    }
+
+  /// do the update for logged= true
+
+  $.ajax({
+    method : "PUT",
+    url : "/api/login",
+    data: updatelog
+  }).then(getUpdate);
+   console.log("finished to log in");
   }
 
   function login() {
