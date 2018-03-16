@@ -16,10 +16,12 @@ $(document).ready(function() {
       return;
     }
 
-    login()
-    
+    login();
+    //update the login state to true
+     updateLogState(userData.email);
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.email, userData.password);
+    //clear out the values after logged in
     emailInput.val("");
     passwordInput.val("");
   });
@@ -36,6 +38,21 @@ $(document).ready(function() {
       console.log(err);
     });
   }
+  //function update logged state to true
+  function updateLogState(email) 
+  {
+    var loginData=
+    {
+      email:email,
+      logged:true
+    }
+  $.ajax({
+    method : "PUT",
+    url : "/api/login",
+    data: loginData
+  }).then(getUpdate);
+  console.log(getUpdate);
+  }
 
   function login() {
   localStorage.clear();
@@ -44,7 +61,15 @@ $(document).ready(function() {
   localStorage.setItem("Cache-ual-Corner", email);
   $('#email').val('');
 
-  /// do the update for logged= true
+  
+
+}
+
+function getUpdate() {
+  $.get("/api/update/", function(res) {
+    updateArr = res;
+    console.log(updateArr);
+  })
 }
 
 
@@ -65,10 +90,10 @@ $(document).ready(function() {
 });
 
 
-  function login() {
-    localStorage.clear();
+  // function login() {
+  //   localStorage.clear();
 
-    var email=$("#email-input").val().trim();
-    localStorage.setItem("Cache-ual-Corner", email);
-    $("#email").val("");
-  }
+  //   var email=$("#email-input").val().trim();
+  //   localStorage.setItem("Cache-ual-Corner", email);
+  //   $("#email").val("");
+  // }
