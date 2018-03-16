@@ -38,6 +38,7 @@ module.exports = function(app) {
   // Route for logging user out
   app.get("/logout", function(req, res) 
   {
+    console.log("last logout");
     req.logout();
     res.redirect("/");
   });
@@ -103,5 +104,57 @@ app.put("/api/update/", function (req, res) {
 
 
 });
+
+
+//update logged off on the database by setting state to false
+app.get("/api/leave/", function(req, res) {
+    // findAll returns all entries for a table when used with no options
+    db.User.findAll({}).then(function(dbTodo) {
+      // We have access to the todos as an argument inside of the callback function
+      res.json(dbTodo);
+    });
+    res.redirect("/logout");
+  });
+
+
+app.put("/logout", function (req, res) 
+{
+  console.log("logging out");
+  db.User.update(
+  { logged: false}, 
+  {  
+    where: {  email: req.body.email}
+  }).then(function (getUpdate) {
+    console.log("goodbye!!!");
+    res.json(getUpdate);
+
+  });
+
+
+});
+
+//end of logout area 
+
+//update login state
+
+app.put("/api/login", function (req, res) 
+{
+  console.log("logging in");
+  db.User.update(
+  { logged: true}, 
+  {  
+    where: {  email: req.body.email}
+  }).then(function (getUpdate) {
+    console.log("logging in state is true!!!");
+    res.json(getUpdate);
+
+  });
+
+
+});
+
+
+
+
 
 };

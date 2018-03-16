@@ -1,4 +1,5 @@
-$("form.update").on("submit", function(event) {
+$("form.update").on("submit", function(event) 
+{
 	event.preventDefault();
 
 	var updateData = {
@@ -28,3 +29,27 @@ function getUpdate() {
 		console.log(updateArr);
 	})
 }
+
+//logout setting logged state to false
+$(".navbar-brand").on("click", function(event)
+{
+
+	var signoutData =
+	{
+		email:useremail,
+		logged:false
+	}
+	
+
+	$.ajax({
+		method : "PUT",
+		url : "/logout",
+		data : signoutData
+	}).then(getUpdate);
+console.log(useremail+ " signing out");
+	$.get("/logout").then(function(data) {
+    
+  });
+
+});
+//end of logout call
