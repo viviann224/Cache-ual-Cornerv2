@@ -31,6 +31,8 @@ function getUpdate() {
 }
 
 //logout setting logged state to false
+//you need to update login button name from
+//.navbar-brand to NEW
 $(".navbar-brand").on("click", function(event)
 {
 
