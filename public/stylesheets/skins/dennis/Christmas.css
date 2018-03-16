@@ -91,10 +91,10 @@
 		grid-area: chatarea;
 		border-width: 20px;
 		border-style: outset;
-		border-image: url(../../img/goldTexture1.png) 30 round;
+		border-image: url(/img/goldTexture1.png) 30 round;
 		/*border-color: hsl(40, 100%, 40%);*/
 		margin-right: 10px;
-		background-image:url("../../img/parchment.jpg");
+		background-image:url("/img/parchment.jpg");
 		/*background-color:hsl(40, 100%, 90%);*/
 	}
 

@@ -4,7 +4,7 @@
 
 @font-face {
 font-family: "Graffiti";
-src: url("fonts/GRAFFITICHEECKSSTYLE.otf")
+src: url("/fonts/GRAFFITICHEECKSSTYLE.otf")
 }
 
 	html {
@@ -15,7 +15,7 @@ src: url("fonts/GRAFFITICHEECKSSTYLE.otf")
 	body {
 		min-height: 100vh;
 		font-size: 15px;
-		background-image:url("../../img/brickGray.png");
+		background-image:url("/img/brickGray.png");
 	}
 
 /*modal*/
@@ -98,7 +98,7 @@ src: url("fonts/GRAFFITICHEECKSSTYLE.otf")
 		/*background-color: white;*/
 		border-width: 20px;
 		border-style: solid;
-		border-image: url("../../img/brickRed.png") 10 round;
+		border-image: url("/img/brickRed.png") 10 round;
 		border-color: hsl(0, 100%, 30%);
 		margin-right: 10px;
 		background-color:hsla(0, 0%, 30%, 0.85);
