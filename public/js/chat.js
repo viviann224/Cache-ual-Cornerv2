@@ -30,7 +30,7 @@ $(function () {
   });
 */
   //on LogOut button click
-  $('#btnLogout').on("click", function () {
+  $('#logout').on("click", function () {
     event.preventDefault();
     localStorage.removeItem("Cache-ual-Corner");
     socket.disconnect();
@@ -49,12 +49,13 @@ $(function () {
     if (email) {
       // get the user data from the email
       $.get("/api/user/" + email, function (data) {
-
         var chat = {
           id: data.id,
           user: data.userName,
           msg: chat_messages,
-          time: chat_time
+          time: chat_time,
+          color: data.message_color,
+          avatar: data.avatar_image
         };
 
         // emit chat message using socket connection
@@ -75,7 +76,8 @@ $(function () {
   if (socket) {
     //get the message from socket back to client
     socket.on('chat message', function (msg) {
-      $('#chatMessages').append("<div class='chatMessage'><p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p></div>");
+      // $('#chatMessages').append("<div class='chatMessage'><p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p></div>");
+      $('#chatMessages').append("<div class='chatMessage'><h3>" + msg.user + " </h3><p style='color:" + msg.color + "'>" + msg.msg + "</p><h6>" + moment(msg.time).format('h:mm a') + "</h6><img src='" + msg.avatar +"' /></div>");
       window.scrollTo(0, document.body.scrollHeight);
     });
   }
@@ -86,7 +88,7 @@ $(function () {
 $.get("/api/all", function (data) {
   console.log(data);
   for (var i = 0; i < data.length; i++) {
-    $('#chatMessages').append("<div class='chatMessage'><p>" + data[i].User.userName + "  " + data[i].chat_messages + "   " + moment(data[i].chat_time).format('h:mm a') + "</p></div>");
+    $('#chatMessages').append("<div class='chatMessage'><h3>" + data[i].User.userName + " </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p><h6>" + moment(data[i].chat_time).format('h:mm a') + "</h6><img src='" + data[i].User.avatar_image +"' /></div>");
   }
 });
 
@@ -98,3 +100,7 @@ $.get("/api/users", function (data) {
 
   }
 });
+
+  $.get("/api/user/" + localStorage.getItem("Cache-ual-Corner"), function (data) {
+    $("#userName").text(data.userName);
+  });
