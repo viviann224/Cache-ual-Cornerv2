@@ -22,6 +22,6 @@ function signUpUser(data) {
 		password : data.password,
 		userName : data.userName
 	}).then(data => {
-		window.location.replace(data);
+		console.log(data);
 	});
 }
