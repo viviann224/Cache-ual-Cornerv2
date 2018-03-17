@@ -45,13 +45,13 @@
 			</div>
 
 			<div class="chatElement" id="userArea">
-				<div id="chatInput">
+				<form id="chatInput">
 					<input id="m" autocomplete="off" type="text" size="100"/>
-				     <button id="btnSend">Send</button>
-				 </div>
+				     <button type="submit" id="btnSend">Send</button>
+				 </form>
 			
 				<div id="userInfo">
-					<img src="/img/testAvatar.png"/>
+					<img id="userAvatar" />
 
 					<h3 id="userName"></h3>
 
@@ -68,9 +68,9 @@
 			<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>  
 			<script src="/js/members.js"></script>  
-			<script src="/js/main.js"></script>
+			<!-- <script src="/js/main.js"></script> -->
 			<script src="/js/chat.js"></script>
-			<script src="/js/updateWill.js"></script>
+			<!-- <script src="/js/updateWill.js"></script> -->
 		</footer>
 	</body>
 

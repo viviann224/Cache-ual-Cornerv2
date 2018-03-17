@@ -32,13 +32,32 @@ $(function () {
   //on LogOut button click
   $('#logout').on("click", function () {
     event.preventDefault();
+
+    var useremail = localStorage.getItem("Cache-ual-Corner");
     localStorage.removeItem("Cache-ual-Corner");
     socket.disconnect();
     /// do the update for logged= false
+
+    var signoutData =
+    {
+      email:useremail,
+      logged:false
+    }
+
+    $.ajax({
+      method : "PUT",
+      url : "/logout",
+      data : signoutData
+    }).then(
+      window.location.replace("/login")
+    );
+
+
+
   });
 
   //on send message button click
-  $('#btnSend').on("click", function () {
+  $('#chatInput').on("submit", function () {
     event.preventDefault();
     var chat_time = new Date();
     //get the message from input and email from local storage 
@@ -78,7 +97,7 @@ $(function () {
     //get the message from socket back to client
     socket.on('chat message', function (msg) {
       // $('#chatMessages').append("<div class='chatMessage'><p>" + msg.user + "  " + msg.msg + "   " + moment(msg.time).format('h:mm a') + "</p></div>");
-      $('#chatMessages').append("<div class='chatMessage'><h3>" + msg.user + " </h3><p style='color:" + msg.color + "'>" + msg.msg + "</p><h6>" + moment(msg.time).format('h:mm a') + "</h6><img src='" + msg.avatar +"' /></div>");
+      $('#chatMessages').append("<div class='chatMessage'><img src='" + msg.avatar +"' /><div><h3>" + msg.user + ": </h3><p style='color:" + msg.color + "'>" + msg.msg + "</p><h6>" + moment(msg.time).format('h:mm a') + "</h6></div></div>");
       window.scrollTo(0, document.body.scrollHeight);
     });
   }
@@ -89,7 +108,7 @@ $(function () {
 $.get("/api/all", function (data) {
   console.log(data);
   for (var i = 0; i < data.length; i++) {
-    $('#chatMessages').append("<div class='chatMessage'><h3>" + data[i].User.userName + " </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p><h6>" + moment(data[i].chat_time).format('h:mm a') + "</h6><img src='" + data[i].User.avatar_image +"' /></div>");
+    $('#chatMessages').prepend("<div class='chatMessage'><img src='" + data[i].User.avatar_image +"' /><div><h3>" + data[i].User.userName + ": </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p><h6>" + moment(data[i].chat_time).format('h:mm a') + "</h6></div></div>");
   }
 });
 
@@ -104,4 +123,5 @@ $.get("/api/users", function (data) {
 
   $.get("/api/user/" + localStorage.getItem("Cache-ual-Corner"), function (data) {
     $("#userName").text(data.userName);
+    $("#userAvatar").attr("src", data.avatar_image);
   });

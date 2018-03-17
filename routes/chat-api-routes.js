@@ -13,9 +13,9 @@ module.exports = function (app) {
         attributes: ['userName', 'message_color', 'avatar_image']
       }],
       order: [
-        ['id', 'ASC']
+        ['id', 'DESC']
       ],
-      limit: 20
+      limit: 10
 
     }).then(function (results) {
       res.json(results);

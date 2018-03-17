@@ -24,7 +24,7 @@ module.exports = function(app) {
       password: req.body.password,
       userName: req.body.userName,
       avatar_image: "../img/avatar/avatar1.jpg",
-      message_color: "000000",
+      message_color: "#000000",
       logged: true
     }).then(function() {
       res.redirect(307, "/api/login");
