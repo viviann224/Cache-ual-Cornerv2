@@ -40,6 +40,7 @@ $(function () {
   //on send message button click
   $('#btnSend').on("click", function () {
     event.preventDefault();
+    var chat_time = new Date();
     //get the message from input and email from local storage 
     //to link user with each message they send
     var chat_messages = $('#m').val().trim();
