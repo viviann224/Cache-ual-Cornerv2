@@ -1,19 +1,79 @@
 /*chat room styling*/
 	
 /*html elements*/
+/*added animated bg*/
+
+/*added font*/
+@font-face {
+    font-family: "glamourgirl";
+    src: url("/../../fonts/glamourgirl.TTF");
+}
+
+body 
+{
+	width: 100wh;
+	height: 90vh;
+	font-size: 18px;
+	font-family: "glamourgirl","Times New Roman", serif;
+	background: linear-gradient(-45deg, #fd6bd7, #c300ff, #e17aa2, #ee2774);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 5s ease infinite;
+	-moz-animation: Gradient 5s ease infinite;
+	animation: Gradient 5s ease infinite;
+}
+
+@-webkit-keyframes Gradient 
+{
+	0% {
+			background-position: 0% 50%
+		}
+	50% {
+			background-position: 100% 50%
+		}
+	100% {
+			background-position: 0% 50%
+		}
+}
+
+@-moz-keyframes Gradient 
+{
+	0% {
+			background-position: 0% 50%
+		}
+	50% {
+			background-position: 100% 50%
+		}
+	100% {
+			background-position: 0% 50%
+		}
+}
+
+@keyframes Gradient 
+{
+	0% {
+			background-position: 0% 50%
+		}
+	50% {
+			background-position: 100% 50%
+		}
+	100% {
+			background-position: 0% 50%
+		}
+}
+
 
 
 	html {
 		min-height: 100vh;
 		color: 	hsl(0, 100%, 30%);
 	}
+	/*
 
 	body {
 		min-height: 100vh;
 		font-size: 15px;
-
 		background-color:hsl(315, 100%, 70%);
-	}
+	}*/
 
 /*modal*/
 	.modal {
@@ -72,6 +132,7 @@
 	.chatElement {
 		padding: 1em;
 		overflow: auto;
+
 	}
 
 	#header {
@@ -90,14 +151,25 @@
 		grid-area: sidebar;
 	}
 
+	#sideBar li {
+		color: #000;
+		font-size:1.25em;
+	}
+
 	#chatArea {
 		grid-area: chatarea;
 		border-width: 20px;
 		border-style: solid;
-		border-image:url("../../img/glitter.png") 30 round;
+		border: solid 10px #fff;
+		border-radius: 50px;
+		background: rgba(0,0,0,0.3);
 		margin-right: 10px;
-		background-color: white;
 		color:hsl(0, 100%, 60%);
+		text-shadow: 2px 2px 4px #000000;
+	}
+
+	#chatArea img {
+		border-radius: 50%
 	}
 
 
@@ -124,11 +196,40 @@
 		text-align: center;
 	}
 
+	#userInfo h6 {
+		color: #fff;
+	}
+
 	#userInfo img {
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
 	}
+
+	input[type="text"] {
+            background: rgba(0,0,0,0);
+            border: solid 5px #FFF;
+            border-radius: 1.5em 0 0 1.5em;
+            font-family: "glamourgirl","Times New Roman", sans-serif;
+            color: #FFF;
+            height: 1em;
+            padding: 1em;
+            width: 50%;
+        }
+
+        button {
+            background: rgba(0,0,0,0);
+            border: solid 5px #FFF;
+            border-radius: 0 1.5em 1.5em 0;
+            font-family: "glamourgirl","Times New Roman", sans-serif;
+            color: #FFF;
+            padding: 1em;
+            margin-right: 10em;
+        }
+
+        button:hover {
+        	background: rgba(255,255,255,0.5);
+        }
 
 	#settingsModal {
 		cursor: pointer;
@@ -142,23 +243,32 @@
 
 	h1 {
 		font-size: 3em;
-		color: 	hsl(0, 100%, 60%);
-		font-family: "Bauhaus 93", sans-serif;
-
+		color:white;
+		font-family: "glamourgirl";
+    text-shadow: 2px 2px 4px #000000;
+		/*color: 	hsl(0, 100%, 60%);*/
+		/*font-family: "Bauhaus 93", sans-serif;*/
+		
 	}
 
 	h2 {
 		font-size: 2em;
-		color: 	hsl(0, 100%, 60%);
+		color: white;
+		text-shadow: 2px 2px 4px #000000;
+		/*color: 	hsl(0, 100%, 60%);*/
 		font-family: "Bauhaus 93", sans-serif;
 	}
 
 	h3 {
 		font-size: 1.5em;
+		text-shadow: 2px 2px 4px #000000;
 		color: 	hsl(0, 100%, 60%);
 	}
 
 	h6 {
-		font-size: 0.75em;
-		color: 	hsl(0, 100%, 60%);
+		font-size: 1em;
+	}
+
+	p {
+		font-size: 1.25em;
 	}
