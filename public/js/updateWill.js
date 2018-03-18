@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+	$(".member-name").text(localStorage.getItem("Cache-ual-Corner"))
+});
+
+
 $("form.update").on("submit", function(event) 
 {
 	event.preventDefault();
@@ -10,11 +15,17 @@ $("form.update").on("submit", function(event)
 		logged: true
 	}
 
+	if (updateData.userName === "") {
+		updateData.userName = "I forgot to choose a name";
+	}
+
 	updateUserInfo(updateData)
 })
 
 function updateUserInfo(data) {
 	console.log(data);
+
+	localStorage.setItem("skinChoice", $("#skinChoice").val().trim());
 
 	$.ajax({
 		method : "PUT",
@@ -23,4 +34,5 @@ function updateUserInfo(data) {
 	}).then(
 		window.location.replace("/")
 	);
-}
+};
+

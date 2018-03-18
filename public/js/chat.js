@@ -1,34 +1,9 @@
-//on successful login/sign up
-/*function login() {
-  localStorage.clear();
-  //get the user email, store in local storage
-  var email = $("#email").val().trim();
-  localStorage.setItem("Cache-ual-Corner", email);
-  $('#email').val('');
-
-  /// do the update for logged= true
-}*/
-
 $(function () {
 
   //socket gets created 
   var socket = io();
   var chat_time = new Date();
-  /*
-  //on Login button click
-  $('#btnLogin').on("click", function () {
-    event.preventDefault();
-    login();
 
-  });
-
-  //on Signup button click
-  $('#btnSignup').on("click", function () {
-    event.preventDefault();
-    login();
-
-  });
-*/
   //on LogOut button click
   $('#logout').on("click", function () {
     event.preventDefault();
@@ -51,9 +26,6 @@ $(function () {
     }).then(
       window.location.replace("/login")
     );
-
-
-
   });
 
   //on send message button click

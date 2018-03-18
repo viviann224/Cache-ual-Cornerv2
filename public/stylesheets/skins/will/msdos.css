@@ -1,0 +1,133 @@
+@font-face {
+	font-family: "inconsolata";
+	src: url(/../../fonts/inconsolata.ttf);
+}
+
+/*BODY ELEMENTS*/
+
+	/*'global' effects here i.e. full body background, font styles, etc.*/
+	body {
+		font-family: "inconsolata","Open Sans", sans-serif;
+		color: #33FF00;
+		font-weight: 1000;
+		background-color: #282828;
+	}
+
+	/*All the different pieces that make up the page, you can set 'global' borders here etc.*/
+	.chatWrapper {
+
+	}
+
+/**/
+
+/*CHAT ELEMENTS*/
+
+	/*Header area*/
+		#header {
+			border-bottom: solid 5px #33FF00;
+		}
+
+	/*Sidebar area*/
+		#sideBar {
+			border-right: solid 5px #33FF00;
+			box-shadow: 1000px 2px 1000px -100px rgba(51,255,0,1);
+		}
+
+		#userList {
+
+		}
+
+		#roomList {
+
+		}
+
+	/*Chat area*/
+		#chatArea {
+			border-bottom: solid 5px #33FF00;
+		}
+
+		#chatName {
+
+		}
+
+		#chatMessages {
+
+		}
+
+		.chatMessage {
+
+		}
+
+		.chatMessage img {
+			border: solid 3px #33FF00;
+		}
+
+	/*User area*/
+		#userArea {
+
+		}
+
+		#chatInput {
+
+		}
+
+		input[type="text"] {
+			background: rgba(0,0,0,0);
+			border: solid 3px #33FF00;
+			font-family: "inconsolata","Open Sans", sans-serif;
+			color: #33FF00;
+			height: 1em;
+			padding: 0.5em;
+		}
+
+		button {
+			background: rgba(0,0,0,0);
+			border: solid 3px #33FF00;
+			font-family: "inconsolata","Open Sans", sans-serif;
+			color: #33FF00;
+			padding: 0.5em;
+		}
+
+		#userInfo {
+
+		}
+
+		#userInfo img {
+			border: solid 3px #33FF00;
+		}
+
+/**/
+
+/*Font and image styles*/
+
+		h1 {
+
+		}
+
+		h2 {
+
+		}
+
+		h3 {
+
+		}
+
+		h6 {
+
+		}
+
+		p {
+
+		}
+
+		a {
+			color: #33FF00;
+		}
+
+		a:visited {
+			color: #33FF00;
+		}
+
+		img {
+
+		}

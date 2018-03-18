@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "levibrush";
-  src: url(../fonts/levibrush.TTF);
+  font-family: "decade";
+  src: url(../fonts/decade.ttf);
 }
 
 body {
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/menuBackground.jpg);
-	font-family: "levibrush","Open Sans", sans-serif;
+	font-family: "decade","Open Sans", sans-serif;
 	color: #e9d66b;
 }
 
@@ -26,7 +26,7 @@ input {
 }
 
 input[type="text"], input[type="password"], input[type="email"] {
-	border: 10px solid #000;
+	border: 0px solid #e9d66b;
 	border-radius: 1.125em;
 	font-size: 2em;
 	padding: 0.25em 0.5em;
@@ -41,7 +41,21 @@ input[type="color"] {
 }
 
 button {
-	margin-top: 2em;
+	font-family: "decade","Open Sans", sans-serif;
+	width: 50%;
+	height: 3em;
+	background: rgba(0,0,0,0);
+	border: solid 2px #e9d66b;
+	border-radius: 1.5em;
+	color: #e9d66b;
+	font-size: 1.5em;
+}
+
+button:hover {
+	background: rgba(0,0,0,0.3);
+}
+
+select {
 	width: 50%;
 }
 
@@ -53,4 +67,9 @@ h1 {
 
 h2 {
 	font-size: 2em;
+	text-align: center;
+}
+
+a:visited {
+	color: #e9d66b;
 }

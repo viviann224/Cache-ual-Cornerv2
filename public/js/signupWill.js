@@ -16,9 +16,8 @@ $("form.signup").on("submit", function(event) {
 
 function signUpUser(data) {
 	console.log(data);
-
 	localStorage.setItem("Cache-ual-Corner", data.email);
-	
+
 	$.post("/api/signup", {
 		email : data.email,
 		password : data.password,
