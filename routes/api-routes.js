@@ -23,7 +23,7 @@ module.exports = function(app) {
       email: req.body.email,
       password: req.body.password,
       userName: req.body.userName,
-      avatar_image: "../img/avatar/avatar1.jpg",
+      avatar_image: "../img/avatar/avatar01.jpg",
       message_color: "#000000",
       logged: true
     }).then(function() {

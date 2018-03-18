@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/stylesheets/reset.css" type="text/css" />
     <link rel="stylesheet" href="/stylesheets/menuStyles.css" type="text/css" />
-    <!--jquery-->
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Update your info</title>
     <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png"/>
   </head>
@@ -19,21 +17,36 @@
       <input type="text" id="userName" placeholder="Your new username">
 
       <div>
-        <input type="radio" name="img" value="image1.png">Test
-        <input type="radio" name="img" value="image2.png">Test
-        <input type="radio" name="img" value="image3.png">Test
-        <input type="radio" name="img" value="image4.png">Test
-        <input type="radio" name="img" value="image5.png">Test
+        <input type="radio" name="img" value="../img/avatar/avatar01.jpg" checked="checked"><img src="../img/avatar/avatar01.jpg" />
+        <input type="radio" name="img" value="../img/avatar/avatar02.jpg"><img src="../img/avatar/avatar02.jpg" />
+        <input type="radio" name="img" value="../img/avatar/avatar03.jpg"><img src="../img/avatar/avatar03.jpg" />
+        <input type="radio" name="img" value="../img/avatar/avatar04.jpg"><img src="../img/avatar/avatar04.jpg" />
+        <input type="radio" name="img" value="../img/avatar/avatar05.jpg"><img src="../img/avatar/avatar05.jpg" />
       </div>
 
-      <input type="color" id="updateColor" value="#ff0000"><h2>Change your font color</h2>
+      <h2>Change your font color</h2>
+      <input type="color" id="updateColor" value="#ff0000">
         <br>
+      
+      <h2>What are you feeling like today? (Choose chat skin)</h2>
+      <select id="skinChoice">
+        <option value="default">default</option>
+        <option value="msdos">MS DOS</option>
+        <option value="girly">"Girly"</option>
+        <option value="christmas">Christmas</option>
+        <option value="urban">Urban</option>
+      </select>  
+        <br><br>
 
       <button name="updateAcct" type="submit">Submit</button>
+        <br>
+
+      <a href="/"><h2>Never mind, I just want to chat</h2></a>
+
     </form>
 
     <footer>
-       <script type="text/javascript" src="js/members.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="js/updateWill.js"></script>
     </footer>
 
