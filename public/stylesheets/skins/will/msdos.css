@@ -7,7 +7,7 @@
 
 	/*'global' effects here i.e. full body background, font styles, etc.*/
 	body {
-		font-family: "inconsolata","Open Sans", sans-serif;
+		font-family: "inconsolata","terminal", serif;
 		color: #33FF00;
 		font-weight: 1000;
 		background-color: #282828;
