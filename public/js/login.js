@@ -75,14 +75,11 @@ $(document).ready(function() {
   }
 
   function login() {
-  localStorage.clear();
+  localStorage.removeItem("Cache-ual-Corner");
   //get the user email, store in local storage
   var email = $("#email-input").val().trim();
   localStorage.setItem("Cache-ual-Corner", email);
-  $('#email').val('');
-
-  
-
+  $('#email').val(''); 
 }
 
 function getUpdate() {
