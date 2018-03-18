@@ -2,32 +2,14 @@ $(function () {
 
   //socket gets created 
   var socket = io();
-  var chat_time = new Date();
+  //var chat_time = new Date();
 
   //on LogOut button click
   $('#logout').on("click", function () {
     event.preventDefault();
-
-    var useremail = localStorage.getItem("Cache-ual-Corner");
-    localStorage.removeItem("Cache-ual-Corner");
     socket.disconnect();
     /// do the update for logged= false
-
-    var signoutData =
-    {
-      email:useremail,
-      logged:false
-    }
-
-    $.ajax({
-      method : "PUT",
-      url : "/logout",
-      data : signoutData
-    }).then(
-      window.location.replace("/login")
-    );
   });
-
   //on send message button click
   $('#chatInput').on("submit", function () {
     event.preventDefault();
