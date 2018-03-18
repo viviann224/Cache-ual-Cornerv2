@@ -3,13 +3,17 @@
 /*html elements*/
 
 @font-face {
-font-family: "Graffiti";
-src: url("/fonts/GRAFFITICHEECKSSTYLE.otf")
+font-family: "battle";
+src: url("/fonts/battle.ttf")
+}
+
+@font-face {
+font-family: "decade";
+src: url("/fonts/drip.ttf")
 }
 
 	html {
 		min-height: 100vh;
-		color: 	hsl(0, 100%, 30%);
 	}
 
 	body {
@@ -95,19 +99,17 @@ src: url("/fonts/GRAFFITICHEECKSSTYLE.otf")
 
 	#chatArea {
 		grid-area: chatarea;
-		/*background-color: white;*/
-		border-width: 20px;
-		border-style: solid;
-		border-image: url("/img/brickRed.png") 10 round;
-		border-color: hsl(0, 100%, 30%);
+		border: 2px solid #000;
 		margin-right: 10px;
-		background-color:hsla(0, 0%, 30%, 0.85);
+		background:rgba(0,0,0,0.5);
+		z-index: 2;
 		
 	}
 
 	.chatMessage {
 		margin-top: 1%;
 		line-height: 1.25em;
+		z-index: -15;
 	}
 
 	#userArea {
@@ -140,28 +142,73 @@ src: url("/fonts/GRAFFITICHEECKSSTYLE.otf")
 		cursor: pointer;
 	}
 
+	input[type="text"] {
+        background:rgba(0,0,0,0.3);
+        border: solid 5px #000;
+        font-family: "decade","Times New Roman", sans-serif;
+        font-size: 2em;
+        letter-spacing: 2px;
+        color: #000;
+        width: 50%;
+    }
+
+    button {
+        background: rgba(0,0,0,0);
+        border: solid 5px #000;
+        font-family: "decade","Times New Roman", sans-serif;
+        font-size: 2em;
+        color: #000;
+    }
+
+    button:hover {
+    	background: rgba(0,0,0,0.3);
+    }
+
 /*font styles*/
 
 	h1 {
 		font-size: 3em;
-		color: 	hsl(0, 100%, 30%);
-		font-family: "Graffiti";
-
+		color: rgba(0,0,0,0);
+		font-family: "battle";
+		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 	}
 
 	h2 {
 		font-size: 2em;
-		color: 	hsl(0, 100%, 30%);
-		font-family: "Graffiti";
+		color: rgba(0,0,0,0);
+		font-family: "battle";
+		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 
 	}
 
 	h3 {
 		font-size: 1.5em;
-		color: 	hsl(0, 100%, 30%);
+		color: rgba(0,0,0,0);
+		font-family: "battle";
+		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 	}
 
 	h6 {
-		font-size: 0.75em;
+		font-family: "decade";
+		font-size: 1.25em;
+		text-shadow: 2px 2px 4px #555555;
 		color: 	hsl(0, 100%, 30%);
 	}
+
+	#chatArea h6 {
+		color: #fff;
+		text-shadow: 2px 2px 6px #000;
+	}
+
+	p, li {
+		font-family: "decade";
+		margin-top: 0.5em;
+		font-size: 2em;
+		letter-spacing: 1px;
+		text-shadow: 2px 2px 4px #000;
+	}
+
+	li {
+		text-shadow: 2px 2px 4px #555555;
+	}
+
