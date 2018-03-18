@@ -175,7 +175,7 @@ src: url("/fonts/drip.ttf")
 
 	h2 {
 		font-size: 2em;
-		color: 	#80FF00;
+		color: rgba(0,0,0,0);
 		font-family: "battle";
 		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 

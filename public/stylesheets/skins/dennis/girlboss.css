@@ -158,11 +158,10 @@ body
 
 	#chatArea {
 		grid-area: chatarea;
-		border-width: 20px;
-		border-style: solid;
 		border: solid 10px #fff;
-		border-radius: 50px;
+		border-radius: 50px 0 0 0;
 		background: rgba(0,0,0,0.3);
+		border-right: none;
 		margin-right: 10px;
 		color:hsl(0, 100%, 60%);
 		text-shadow: 2px 2px 4px #000000;
