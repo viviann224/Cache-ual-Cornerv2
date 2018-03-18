@@ -117,3 +117,23 @@ function getUpdate() {
   //   localStorage.setItem("Cache-ual-Corner", email);
   //   $("#email").val("");
   // }
+
+  $('#logout').on("click", function () {
+    event.preventDefault();
+    var useremail = localStorage.getItem("Cache-ual-Corner");
+    localStorage.removeItem("Cache-ual-Corner");    
+
+    var signoutData =
+    {
+      email:useremail,
+      logged:false
+    }
+
+    $.ajax({
+      method : "PUT",
+      url : "/logout",
+      data : signoutData
+    }).then(
+      window.location.replace("/login")
+    );
+  });
