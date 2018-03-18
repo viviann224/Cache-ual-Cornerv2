@@ -8,6 +8,23 @@ $(function () {
   $('#logout').on("click", function () {
     event.preventDefault();
     socket.disconnect();
+
+    var useremail = localStorage.getItem("Cache-ual-Corner");
+    localStorage.removeItem("Cache-ual-Corner");    
+
+    var signoutData =
+    {
+      email:useremail,
+      logged:false
+    }
+
+    $.ajax({
+      method : "PUT",
+      url : "/logout",
+      data : signoutData
+    }).then(
+      window.location.replace("/login")
+    );
     /// do the update for logged= false
   });
   //on send message button click
