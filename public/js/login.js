@@ -97,6 +97,8 @@ $(document).ready(function()
       console.log(updateArr);
     })
   }
+});
+
 //when user logs out clear out the local storage and sign the user out and update logged to false
 $("#logout").on("click", function () 
   {
@@ -120,4 +122,3 @@ $("#logout").on("click", function ()
       window.location.replace("/login")
     );
   });
-});
