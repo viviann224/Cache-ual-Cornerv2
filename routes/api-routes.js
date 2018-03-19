@@ -17,8 +17,6 @@ module.exports = function(app) {
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
-    console.log(req.body);
-    console.log("username in api route: "+req.body.userName);
     db.User.create({
       email: req.body.email,
       password: req.body.password,
@@ -29,18 +27,15 @@ module.exports = function(app) {
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
-      console.log(err);
+
       res.json(err);
-      // res.status(422).json(err.errors[0].message);
     });
   });
 
   // Route for logging user out
   app.get("/logout", function(req, res) 
   {
-    console.log("last logout");
     req.logout();
-    // res.redirect("/");
   });
 
   // Route for getting some data about our user to be used client side
@@ -59,36 +54,18 @@ module.exports = function(app) {
     }
   });
 
-//  app.get("/api/update", function (req, res) {
-//   db.Login.update({
-//       userName: req.body.userName,
-//    avatar_image: req.body.avatar_image,
-//    message_color: req.body.message_color
-//   }, {
-//     where: {
-//       email: req.body.email
-//     }
-//   }).then(function (results) {
-
-//     res.json(results);
-//   });
-
-
-// });
-
-// GET route for getting all of the todos
+// GET route for getting all of the updates
   app.get("/api/update", function(req, res) {
     // findAll returns all entries for a table when used with no options
     db.User.findAll({}).then(function(dbTodo) {
-      // We have access to the todos as an argument inside of the callback function
+      // We have access to the updates as an argument inside of the callback function
       res.json(dbTodo);
     });
   });
 
+//get route for settings area for user to update, name, avatar, and skin
 app.put("/api/update/", function (req, res) {
-  console.log("doing the in api routes update");
   db.User.update({
-      //userName: req.body.userName,
    avatar_image: req.body.avatar_image,
    message_color: req.body.message_color,
    userName: req.body.userName,
@@ -98,11 +75,8 @@ app.put("/api/update/", function (req, res) {
       email: req.body.email
     }
   }).then(function (getUpdate) {
-    console.log("Updated!!!");
     res.json(getUpdate);
   });
-
-
 });
 
 
@@ -116,21 +90,16 @@ app.get("/api/leave/", function(req, res) {
     res.redirect("/logout");
   });
 
-
+//once logout update the logged state
 app.put("/logout", function (req, res) 
 {
-  console.log("logging out");
   db.User.update(
   { logged: false}, 
   {  
     where: {  email: req.body.email}
   }).then(function (getUpdate) {
-    console.log("goodbye!!!");
     res.json(getUpdate);
-
   });
-
-
 });
 
 //end of logout area 
@@ -147,11 +116,5 @@ app.put("/api/login", function (req, res)
 
   });
 
-
 });
-
-
-
-
-
 };

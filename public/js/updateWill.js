@@ -23,8 +23,6 @@ $("form.update").on("submit", function(event)
 })
 
 function updateUserInfo(data) {
-	console.log(data);
-
 	localStorage.setItem("skinChoice", $("#skinChoice").val().trim());
 
 	$.ajax({

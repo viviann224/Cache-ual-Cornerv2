@@ -60,15 +60,5 @@ module.exports = function (app) {
     });
   });
 
-  /*// Delete chats for 500 msgs
-  app.post("/api/delete", function(req, res) {
-    console.log("chat Data: " +req.body);
-    
-    Chat.destroy({
-      where: {
-        id: req.body.id
-      }
-    });
-  });*/
   
 };

@@ -37,10 +37,9 @@ $(document).ready(function() {
 
     }).then(function(data) {
       window.location.replace(data);
-      // If there's an error, log the error
-    }).catch(function(err) {
-      console.log(err);
-    });
+
+    })
+    
   }
   //once logged in use the email and update the log state to true
   function updateLogState(email) 
@@ -56,13 +55,11 @@ $(document).ready(function() {
     url : "/api/login",
     data: loginData
   }).then(getUpdate);
-  console.log(getUpdate);
   }
 
   function updateLogState(email) 
   {
-    console.log(email);
-//update logged state to true
+  //update logged state to true
     var updatelog=
     {
       email:email
@@ -74,7 +71,6 @@ $(document).ready(function() {
     url : "/api/login",
     data: updatelog
   }).then(getUpdate);
-   console.log("finished to log in");
   }
   //function login() addeds current user's email to local storage
   function login() 
@@ -91,53 +87,7 @@ $(document).ready(function() {
 function getUpdate() {
   $.get("/api/update/", function(res) {
     updateArr = res;
-    console.log(updateArr);
   })
 }
-
-<<<<<<< HEAD
-
-//on Login button click
-  // $('#btnLogin').on("click", function () {
-  //   event.preventDefault();
-  //   login();
-
-  // });
-
-  // //on Signup button click
-  // $('#btnSignup').on("click", function () {
-  //   event.preventDefault();
-  //   login();
-
-  // });
-
 });
 
-
-  // function login() {
-  //   localStorage.clear();
-
-  //   var email=$("#email-input").val().trim();
-  //   localStorage.setItem("Cache-ual-Corner", email);
-  //   $("#email").val("");
-  // }
-
-  // $('#logout').on("click", function () {
-  //   event.preventDefault();
-  //   var useremail = localStorage.getItem("Cache-ual-Corner");
-  //   localStorage.removeItem("Cache-ual-Corner");    
-
-  //   var signoutData =
-  //   {
-  //     email:useremail,
-  //     logged:false
-  //   }
-
-  //   $.ajax({
-  //     method : "PUT",
-  //     url : "/logout",
-  //     data : signoutData
-  //   }).then(
-  //     window.location.replace("/login")
-  //   );
-  // });

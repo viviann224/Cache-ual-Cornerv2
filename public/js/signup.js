@@ -1,5 +1,5 @@
 $(document).ready(function() 
-{console.log("test");
+{ 
   // Getting references to our form and input
   var signUpForm = $("form.signup");
   var usernameInput =$("input#username-input");
@@ -47,9 +47,6 @@ $(document).ready(function()
   }
 
 
-
-
-  
 // Getting references to our form and input
   var updateForm = $("form.update");
    updateForm.on("submit", function(event) 
@@ -61,12 +58,9 @@ $(document).ready(function()
 
    var imgInput = "/img/testAvatar.png";
    var inputColor=$("#updateColor").val();
-   //console.log(inputColor);
    var updateColor=inputColor;
    var updateArr=[];
    var updateUser=updatenameInput;
-       console.log($("#userName").val());
-   //var updateUser="bob";
     event.preventDefault();
     //grabbing current user to update their info
 
@@ -80,8 +74,7 @@ $(document).ready(function()
     };
 
     updateUserInfo(updateData);
-    console.log(updateData)
-   //updateUserInfo(updateUser, imgInput, updateColor);
+
   });
 
 function updateUserInfo(update)
@@ -100,22 +93,5 @@ function updateUserInfo(update)
 
     });
   }
- //   {
- //   function updateUserInfo(update)
- //   {
- //    console.log("updating");
- //    //console.log("inside update user: "+ username + " "+ img+ " "+ color);
- //   //console.log(id);
- // $.get("/api/update/", update)
- //   // On success, run the following code
- //   .then(function (updateData) {
- //     // Log the data we found
-
- //     console.log("updated");
- //     location.reload();
-
- //   });
- //   }
-
 
 });
