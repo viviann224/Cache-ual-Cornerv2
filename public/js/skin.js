@@ -14,6 +14,6 @@ switch (skin) {
 		$("head").append('<link rel="stylesheet" href="/stylesheets/skins/will/msdos.css" type="text/css" />');
 		break;
 	default:
-		$("head").append('<link rel="stylesheet" href="/stylesheets/skins/will/default.css" type="text/css" />');
+		$("head").append('<link rel="stylesheet" href="/stylesheets/skins/will/msdos.css" type="text/css" />');
 		break;
 }

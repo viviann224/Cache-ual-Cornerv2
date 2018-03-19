@@ -95,4 +95,49 @@ function getUpdate() {
   })
 }
 
+<<<<<<< HEAD
+
+//on Login button click
+  // $('#btnLogin').on("click", function () {
+  //   event.preventDefault();
+  //   login();
+
+  // });
+
+  // //on Signup button click
+  // $('#btnSignup').on("click", function () {
+  //   event.preventDefault();
+  //   login();
+
+  // });
+
 });
+
+
+  // function login() {
+  //   localStorage.clear();
+
+  //   var email=$("#email-input").val().trim();
+  //   localStorage.setItem("Cache-ual-Corner", email);
+  //   $("#email").val("");
+  // }
+
+  // $('#logout').on("click", function () {
+  //   event.preventDefault();
+  //   var useremail = localStorage.getItem("Cache-ual-Corner");
+  //   localStorage.removeItem("Cache-ual-Corner");    
+
+  //   var signoutData =
+  //   {
+  //     email:useremail,
+  //     logged:false
+  //   }
+
+  //   $.ajax({
+  //     method : "PUT",
+  //     url : "/logout",
+  //     data : signoutData
+  //   }).then(
+  //     window.location.replace("/login")
+  //   );
+  // });

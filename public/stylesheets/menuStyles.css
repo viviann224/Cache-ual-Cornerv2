@@ -5,6 +5,7 @@
 
 body {
 	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../img/menuBackground.jpg);
+	background-size: cover;
 	font-family: "decade","Open Sans", sans-serif;
 	color: #e9d66b;
 }
@@ -31,6 +32,11 @@ input[type="text"], input[type="password"], input[type="email"] {
 	font-size: 2em;
 	padding: 0.25em 0.5em;
 	background-color: rgba(255,255,255,0.5);
+}
+
+#radioList {
+	display: flex;
+	margin-bottom: 0.5em;
 }
 
 input[type="color"] {
