@@ -5,8 +5,8 @@
 
 /*added font*/
 @font-face {
-    font-family: "glamourgirl";
-    src: url("/../../fonts/glamourgirl.TTF");
+	font-family: "glamourgirl";
+	src: url("/../../fonts/glamourgirl.TTF");
 }
 
 body 
@@ -244,9 +244,7 @@ body
 		font-size: 3em;
 		color:white;
 		font-family: "glamourgirl";
-    text-shadow: 2px 2px 4px #000000;
-		/*color: 	hsl(0, 100%, 60%);*/
-		/*font-family: "Bauhaus 93", sans-serif;*/
+    	text-shadow: 2px 2px 4px #000000;
 		
 	}
 
