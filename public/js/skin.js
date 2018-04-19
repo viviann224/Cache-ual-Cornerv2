@@ -4,9 +4,9 @@ switch (skin) {
 	case "girly":
 		$("head").append('<link rel="stylesheet" href="/stylesheets/skins/dennis/girlboss.css" type="text/css" />');
 		break;
-	case "christmas":
+	/*case "christmas":
 		$("head").append('<link rel="stylesheet" href="/stylesheets/skins/dennis/xmas.css" type="text/css" />');
-		break;
+		break;*/
 	case "urban":
 		$("head").append('<link rel="stylesheet" href="/stylesheets/skins/dennis/brickhouse.css" type="text/css" />');
 		break;
