@@ -40,11 +40,11 @@ db.sequelize.sync({ }).then(function() {
 
   io.on('connection', function(socket){
   //console.log('user connected ' +socket.id);
-    socket.on('chat message', function(msg){    
+    socket.on('chat message', function(msg){
     io.emit('chat message', msg);
 
   });
-    
+
  socket.on('disconnect', function(){
    // console.log(socket.id + '   user disconnected');
   });
@@ -58,7 +58,7 @@ db.sequelize.sync({ }).then(function() {
 // =============================================================
 
 db.sequelize.sync({
-  // force: true
+   force: true
 }).then(function () {
   server.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
@@ -66,7 +66,7 @@ db.sequelize.sync({
   });
 });
 
-// socket connection and disconnect 
+// socket connection and disconnect
 // =============================================================
 
 io.on('connection', function (socket) {

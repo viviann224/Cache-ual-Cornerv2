@@ -33,7 +33,7 @@ module.exports = function(app) {
   });
 
   // Route for logging user out
-  app.get("/logout", function(req, res) 
+  app.get("/logout", function(req, res)
   {
     req.logout();
   });
@@ -68,7 +68,7 @@ app.put("/api/update/", function (req, res) {
   db.User.update({
    avatar_image: req.body.avatar_image,
    message_color: req.body.message_color,
-   userName: req.body.userName,
+   /*userName: req.body.userName,*/
    logged: true
   }, {
     where: {
@@ -91,25 +91,25 @@ app.get("/api/leave/", function(req, res) {
   });
 
 //once logout update the logged state
-app.put("/logout", function (req, res) 
+app.put("/logout", function (req, res)
 {
   db.User.update(
-  { logged: false}, 
-  {  
+  { logged: false},
+  {
     where: {  email: req.body.email}
   }).then(function (getUpdate) {
     res.json(getUpdate);
   });
 });
 
-//end of logout area 
+//end of logout area
 
 //update login state
-app.put("/api/login", function (req, res) 
+app.put("/api/login", function (req, res)
 {
   db.User.update(
-  { logged: true}, 
-  {  
+  { logged: true},
+  {
     where: { email: req.body.email}
   }).then(function (getUpdate) {
     res.json(getUpdate);

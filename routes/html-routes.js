@@ -4,10 +4,10 @@ var path = require("path");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) 
+module.exports = function(app)
 {
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
   //login route
   app.get("/login", function(req, res) {
@@ -38,6 +38,6 @@ module.exports = function(app)
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
-  
+
 
 };

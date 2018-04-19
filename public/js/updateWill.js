@@ -3,22 +3,22 @@ $( document ).ready(function() {
 });
 
 
-$("form.update").on("submit", function(event) 
+$("form.update").on("submit", function(event)
 {
 	event.preventDefault();
 
 	var updateData = {
-		userName: $("#userName").val().trim(), 
+	/*	userName: $("#userName").val().trim(), */
 		avatar_image:$("input:radio[name ='img']:checked").val(),
 		message_color: $("#updateColor").val(),
 		email: localStorage.getItem("Cache-ual-Corner"),
 		logged: true
 	}
 
-	if (updateData.userName === "") {
+	/*if (updateData.userName === "") {
 		updateData.userName = "I forgot to choose a name";
 	}
-
+*/
 	updateUserInfo(updateData)
 })
 
@@ -33,4 +33,3 @@ function updateUserInfo(data) {
 		window.location.replace("/")
 	);
 };
-
