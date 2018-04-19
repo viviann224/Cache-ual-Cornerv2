@@ -1,5 +1,5 @@
 /*chat room styling*/
-	
+
 /*html elements*/
 /*added animated bg*/
 
@@ -9,7 +9,7 @@
 	src: url("/../../fonts/glamourgirl.TTF");
 }
 
-body 
+body
 {
 	width: 100wh;
 	height: 90vh;
@@ -22,7 +22,7 @@ body
 	animation: Gradient 5s ease infinite;
 }
 
-@-webkit-keyframes Gradient 
+@-webkit-keyframes Gradient
 {
 	0% {
 			background-position: 0% 50%
@@ -35,7 +35,7 @@ body
 		}
 }
 
-@-moz-keyframes Gradient 
+@-moz-keyframes Gradient
 {
 	0% {
 			background-position: 0% 50%
@@ -48,7 +48,7 @@ body
 		}
 }
 
-@keyframes Gradient 
+@keyframes Gradient
 {
 	0% {
 			background-position: 0% 50%
@@ -177,8 +177,8 @@ body
 		line-height: 1.25em;
 	}
 
-	
-	
+
+
 	#userArea {
 		grid-area: userarea;
 		display: flex;
@@ -245,7 +245,7 @@ body
 		color:white;
 		font-family: "glamourgirl";
     	text-shadow: 2px 2px 4px #000000;
-		
+
 	}
 
 	h2 {
@@ -257,14 +257,18 @@ body
 	}
 
 	h3 {
-		font-size: 1.5em;
+		font-size: 1em;
 		text-shadow: 2px 2px 4px #000000;
 		color: 	hsl(0, 100%, 60%);
+		padding:0px;
 	}
 
 	h6 {
-		font-size: 1em;
+		font-size: .75em;
+		padding:0px;
+		word-spacing: -1px;
 	}
+
 
 	p {
 		font-size: 1.25em;
