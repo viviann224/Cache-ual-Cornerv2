@@ -163,6 +163,7 @@ body
 	}
 
 	#sideBar li {
+		list-style-type: circle;
 		text-transform: capitalize;
 		text-shadow: 2px 2px 4px #000000;
 		font-family: "chatusername","Times New Roman", sans-serif;
@@ -190,7 +191,8 @@ body
 	}
 
 	#chatArea img {
-		border-radius: 50%
+		border-radius: 50%;
+		border:1px solid #000000;
 	}
 
 
@@ -222,9 +224,10 @@ body
 	}
 
 	#userInfo img {
-		height: 50px;
-		width: 50px;
+		height: 48px;
+		width: 48px;
 		border-radius: 50%;
+		box-shadow: 2px 2px 4px #000000;
 	}
 
 	input[type="text"] {
@@ -296,18 +299,17 @@ body
 		padding:0px;
 		word-spacing: -1px;
 		color: 	#eaeae8;
+		text-shadow: 2px 2px 4px #303030;
 	
 	}
-	#logout
-	{
+	#logout{
 		text-shadow: 2px 2px 4px #000000;
 	}
 
-	#logout:hover 
-	{
-  text-decoration: underline;
-  color: #f6dfd3 ;
-}
+	#logout:hover {
+	  text-decoration: underline;
+	  color: #f6dfd3 ;
+	}
 
 
 	p {
@@ -318,7 +320,7 @@ body
 
 	/*link styling*/
 	a {
-  color: red;
+  color: #b55050;
 
   text-decoration: none;
 
@@ -326,7 +328,8 @@ body
 
 a:hover {
   text-decoration: underline;
-  color: #f6dfd3 ;
+  color: #f6dfd3  !important;
+
 }
 
 a:active {
