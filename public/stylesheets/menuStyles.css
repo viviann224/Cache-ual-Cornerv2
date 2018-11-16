@@ -87,20 +87,26 @@ input[type="text"], input[type="password"], input[type="email"] {
 	border-radius: 1.125em;
 	font-size: 2em;
 	padding: 0.1em 0.5em;
-	background-color: rgba(255,255,255,0.5);
+	background-color: #aeadae;
 	font-family: chatfont, "Open Sans", sans-serif;
 }
+
 
 #radioList {
 	display: flex;
 	margin-bottom: 0.5em;
 }
 
+#icon {
+		border-radius: 10%;
+		border:1px solid #000000;
+	}
+
 input[type="color"] {
 	height: 5em;
 	width: 10em;
 	border: none;
-	background-color: #000;
+	background-color: #aeadae;
 }
 
 button {
@@ -119,6 +125,8 @@ button:hover {
 	background: rgba(0,0,0,0.3);
 	color: #ffffff;
 }
+
+
 
 select {
 	width: 50%;

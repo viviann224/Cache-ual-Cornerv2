@@ -15,33 +15,38 @@
 
     <form class="update">
     <!--  <input type="text" id="userName" placeholder="Your new username"> -->
+    <h3>Choose an avatar</h3>
+    <br>
 
       <div id="radioList">
-        <input type="radio" name="img" value="../img/avatar/avatar01.jpg" checked="checked"><img src="../img/avatar/avatar01.jpg" />
-        <input type="radio" name="img" value="../img/avatar/avatar02.jpg"><img src="../img/avatar/avatar02.jpg" />
-        <input type="radio" name="img" value="../img/avatar/avatar03.jpg"><img src="../img/avatar/avatar03.jpg" />
-         <input type="radio" name="img" value="../img/avatar/avatar04.jpg"><img src="../img/avatar/avatar04.jpg" />
-        <input type="radio" name="img" value="../img/avatar/avatar05.jpg"><img src="../img/avatar/avatar05.jpg" />
+        <input type="radio" name="img" value="../img/avatar/avatar01.jpg" checked="checked"><img src="../img/avatar/avatar01.jpg" id="icon"/>
+        <input type="radio" name="img" value="../img/avatar/avatar02.jpg"><img src="../img/avatar/avatar02.jpg" id="icon"/>
+        <input type="radio" name="img" value="../img/avatar/avatar03.jpg"><img src="../img/avatar/avatar03.jpg" id="icon"/>
+         <input type="radio" name="img" value="../img/avatar/avatar04.jpg"><img src="../img/avatar/avatar04.jpg" id="icon"/>
+        <input type="radio" name="img" value="../img/avatar/avatar05.jpg"><img src="../img/avatar/avatar05.jpg" id="icon"/>
         <!--<input type="radio" name="img" value="../img/avatar/avatar06.jpg"><img src="../img/avatar/avatar06.jpg" />
         <input type="radio" name="img" value="../img/avatar/avatar07.jpg"><img src="../img/avatar/avatar07.jpg" />
         <input type="radio" name="img" value="../img/avatar/avatar08.jpg"><img src="../img/avatar/avatar08.jpg" />
         <input type="radio" name="img" value="../img/avatar/avatar09.jpg"><img src="../img/avatar/avatar09.jpg" />
          <input type="radio" name="img" value="../img/avatar/avatar10.jpg"><img src="../img/avatar/avatar10.jpg" /> -->
-        <input type="radio" name="img" value="../img/avatar/avatar11.jpg"><img src="../img/avatar/avatar11.jpg" />
+        <input type="radio" name="img" value="../img/avatar/avatar11.jpg"><img src="../img/avatar/avatar11.jpg" id="icon"/>
         <!-- <input type="radio" name="img" value="../img/avatar/avatar12.jpg"><img src="../img/avatar/avatar12.jpg" /> -->
       </div>
 
       <h3>Change your font color</h3>
       <input type="color" id="updateColor" value="#ff0000">
         <br>
-
-      <h3>What are you feeling like today? (Choose chat skin)</h3>
+      <div id="skinOption">
+      <h3>Choose a chat skin:</h3><br>
+      
+      </div>
       <select id="skinChoice">
         <option value="msdos">default (ms dos)</option>
         <option value="girly">Girl Boss</option>
 
         <option value="urban">Urban</option>
       </select>
+
         <br><br>
 
       <button name="updateAcct" type="submit">Submit</button>

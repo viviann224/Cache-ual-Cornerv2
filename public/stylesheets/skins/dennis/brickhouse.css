@@ -11,6 +11,10 @@ src: url("/fonts/battle.ttf")
 font-family: "decade";
 src: url("/fonts/drip.ttf")
 }
+@font-face {
+		font-family: "chatfont";
+		src: url("/../../fonts/Roboto-LightItalic.TTF");
+}
 
 	html {
 		min-height: 100vh;
@@ -132,6 +136,13 @@ src: url("/fonts/drip.ttf")
 		height: 50px;
 		width: 50px;
 		border-radius: 50%;
+		border:1px solid #000000;
+		box-shadow: 2px 2px 4px #717171;
+	}
+
+	#chatArea img {
+		border-radius: 10%;
+		border:1px solid #000000;
 	}
 
 	#settingsModal {
@@ -145,7 +156,7 @@ src: url("/fonts/drip.ttf")
 	input[type="text"] {
         background:rgba(0,0,0,0.3);
         border: solid 5px #000;
-        font-family: "decade","Times New Roman", sans-serif;
+        font-family: chatfont, "Open Sans", sans-serif;
         font-size: 2em;
         letter-spacing: 2px;
         color: #000;
@@ -155,7 +166,7 @@ src: url("/fonts/drip.ttf")
     button {
         background: rgba(0,0,0,0);
         border: solid 5px #000;
-        font-family: "decade","Times New Roman", sans-serif;
+        font-family: chatfont, "Open Sans", sans-serif;
         font-size: 2em;
         color: #000;
     }
@@ -166,11 +177,13 @@ src: url("/fonts/drip.ttf")
 
 /*font styles*/
 
+
 	h1 {
 		font-size: 3em;
 		color: rgba(0,0,0,0);
 		font-family: "battle";
 		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
+		
 	}
 
 	h2 {
@@ -200,12 +213,13 @@ src: url("/fonts/drip.ttf")
 		text-shadow: 2px 2px 6px #000;
 	}
 
-	p, li {
+	p{
 		font-family: "decade";
 		margin-top: 0.5em;
-		font-size: 2em;
+		font-size: 1.2em;
 		letter-spacing: 1px;
 		text-shadow: 2px 2px 4px #000;
+		font-family: chatfont, "Open Sans", sans-serif;
 	}
 
 	li {
