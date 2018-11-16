@@ -1,3 +1,13 @@
+@font-face {
+		font-family: "chatusername";
+		src: url("/../../fonts/Roboto-BoldItalic.TTF");
+}
+
+@font-face {
+		font-family: "chatfont";
+		src: url("/../../fonts/Roboto-LightItalic.TTF");
+}
+
 /*animated background*/
 @-webkit-keyframes Gradient
 {
@@ -78,6 +88,7 @@ input[type="text"], input[type="password"], input[type="email"] {
 	font-size: 2em;
 	padding: 0.1em 0.5em;
 	background-color: rgba(255,255,255,0.5);
+	font-family: chatfont, "Open Sans", sans-serif;
 }
 
 #radioList {
@@ -104,7 +115,9 @@ button {
 }
 
 button:hover {
+	border: solid 2px #000000;
 	background: rgba(0,0,0,0.3);
+	color: #ffffff;
 }
 
 select {
@@ -120,7 +133,7 @@ h1 {
 }
 
 h2 {
-  	font-family: "decade","Open Sans", sans-serif;
+  	font-family: "chatusername","Open Sans", sans-serif;
 	font-size: 1.5em;
 	text-align: center;
 }
@@ -150,7 +163,7 @@ a,a:visited,a:hover,a:active
 
 a:hover
 {
-	color:#d73444;
+	color:#ffffff;
 }
 
 a.before:before,a.after:after
@@ -207,3 +220,13 @@ a.eigth:after
 
 a.before:hover:before,a.after:hover:after
 {  width:100%;}
+
+.container
+{
+	padding-top:5%;
+}
+
+#updateColor
+{
+	box-shadow: 2px 2px 4px #717171;
+}
