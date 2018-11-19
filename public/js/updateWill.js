@@ -8,6 +8,11 @@ $( document ).ready(function() {
 		{
 		    $(".member-name").text(data.userName);
 		    $("#radioList").empty();
+		    $("#chooseAvatar").show();
+			$("#chooseColor").show();
+		
+			$("#updateColor").show();
+	
 		    for(var i=0;i<avatarArr.length;i++)
 		    {
 		    	if(data.avatar_image!= avatarArr[i])
@@ -41,6 +46,9 @@ $( document ).ready(function() {
 		    		//imageAvatar.attr("src", animals[x]);
 		    		$("#radioList").append(inputField);
 		    		$("#radioList").append(inputImageField);
+		    		$("#updateColor").removeAttr("value");
+		    		$("#updateColor").attr("value", data.message_color);
+
 		    	}
 		    }
 		    //$("#userAvatar").attr("src", data.avatar_image);
@@ -56,6 +64,11 @@ $( document ).ready(function() {
 		
 		//updateName=localStorage.getItem("Cache-ual-Corner");
 	}
+	$("#chooseAvatar").hide();
+	$("#chooseColor").hide();
+
+	$("#updateColor").hide();
+	
 	$(".member-name").html('<br><a href="/signup">please sign up to start chatting</a>');
 });
 
