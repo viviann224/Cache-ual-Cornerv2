@@ -141,8 +141,10 @@ src: url("/fonts/drip.ttf")
 	}
 
 	#chatArea img {
+		text-transform: capitalize;
 		border-radius: 10%;
 		border:1px solid #000000;
+		
 	}
 
 	#settingsModal {
@@ -224,5 +226,7 @@ src: url("/fonts/drip.ttf")
 
 	li {
 		text-shadow: 2px 2px 4px #555555;
+		font-size: 1.5em;
+		text-transform: capitalize;
 	}
 

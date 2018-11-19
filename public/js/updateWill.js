@@ -1,5 +1,25 @@
 $( document ).ready(function() {
-	$(".member-name").text(localStorage.getItem("Cache-ual-Corner"))
+
+	//var updateName="please sign up to start chatting";
+	if(localStorage.getItem("Cache-ual-Corner"))
+	{	
+		$.get("/api/user/" + localStorage.getItem("Cache-ual-Corner"), function (data) 
+		{
+		    $(".member-name").text(data.userName);
+		    //$("#userAvatar").attr("src", data.avatar_image);
+ 		 });
+
+
+		// $.get("/api/user/" + localStorage.getItem("Cache-ual-Corner"),then(function(data)
+		// {
+		// 	console.log(data)
+		
+		// 	$(".member-name").text(data.userName);
+		// });
+		
+		//updateName=localStorage.getItem("Cache-ual-Corner");
+	}
+	$(".member-name").html('<br><a href="/signup">please sign up to start chatting</a>');
 });
 
 

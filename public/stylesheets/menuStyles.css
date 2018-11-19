@@ -174,6 +174,7 @@ a:hover
 	color:#ffffff;
 }
 
+
 a.before:before,a.after:after
 {
   content: "";
@@ -237,4 +238,9 @@ a.before:hover:before,a.after:hover:after
 #updateColor
 {
 	box-shadow: 2px 2px 4px #717171;
+}
+
+.member-name
+{
+	text-transform: capitalize;
 }
