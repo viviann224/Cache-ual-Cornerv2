@@ -294,3 +294,12 @@
 	.chatWrapper {
 	  animation: textShadow 1.6s infinite;
 	}
+
+	button:hover, #m:hover, a:hover {
+    	background: #0a6225;
+    }
+    #logout:hover
+    {
+    	text-decoration: underline;
+    }
+    

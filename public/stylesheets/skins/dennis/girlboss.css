@@ -252,7 +252,7 @@ body
             margin-right: 10em;
         }
 
-        button:hover {
+        button:hover, #m:hover {
         	background: rgba(255,255,255,0.5);
         }
 
