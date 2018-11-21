@@ -89,11 +89,12 @@
 		}
 
 		#userInfo {
-
+			text-transform: capitalize;
 		}
 
 		#userInfo img {
 			border: solid 3px #33FF00;
+			
 		}
 
 /**/
@@ -311,6 +312,11 @@
 	{
 		color:#b4b4b4 !important;
 		
+	}
+
+	li
+	{
+		text-transform: capitalize;
 	}
     
     
