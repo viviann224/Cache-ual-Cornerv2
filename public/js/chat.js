@@ -77,7 +77,7 @@ $(function () {
 $.get("/api/all", function (data) {
   for (var i = 0; i < data.length; i++) 
   {
-    console.log(localStorage.getItem("Cache-ual-Corner")+ " "+data[i].User.email)
+    
     if(localStorage.getItem("Cache-ual-Corner")!=data[i].User.email)
     { $('#chatMessages').prepend("<div class='chatMessage'><img src='" + data[i].User.avatar_image +"' /><div><h3 id='otherUser'>" + data[i].User.userName + " ("+ moment(data[i].chat_time).format('h:mm a') + "): </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p></div></div>");}
   else
@@ -89,8 +89,15 @@ $.get("/api/all", function (data) {
 // Make a get request to our api route that will return all the logged users
 $.get("/api/users", function (data) {
 
-  for (var i = 0; i < data.length; i++) {
-    $('#userList').append("<li>" + data[i].userName + "</li>");
+
+  for (var i = 0; i < data.length; i++) 
+  {
+     //console.log(localStorage.getItem("Cache-ual-Corner")+ " "+data[i].email);
+    if(localStorage.getItem("Cache-ual-Corner")!=data[i].email)
+    { $('#userList').append("<li id='currentUser'>" + data[i].userName + "</li>");}
+    else
+    { $('#userList').append("<li>" + data[i].userName + "</li>");}
+    
 
   }
 });

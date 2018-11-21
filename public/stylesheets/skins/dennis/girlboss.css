@@ -285,8 +285,8 @@ body
 	h3 {
 
 		font-family: "chatusername";
-		text-transform: capitalize;
-		font-size: 1em;
+		text-transform: uppercase;
+		font-size: .8em;
 		text-shadow: 2px 2px 4px #000000;
 		color: 	#eaeae8;
 		padding:0px;
@@ -345,4 +345,15 @@ a:visited {
 #header:hover
 {
 	text-decoration: none !important;
+}
+
+#otherUser
+	{
+		color:#b4b4b4 !important;
+		
+	}
+#currentUser
+{
+	color:#b4b4b4 !important;
+	
 }

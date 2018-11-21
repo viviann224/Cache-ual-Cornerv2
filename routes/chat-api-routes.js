@@ -15,7 +15,7 @@ module.exports = function (app) {
       order: [
         ['id', 'DESC']
       ],
-      limit: 10
+      limit: 50
 
     }).then(function (results) {
       res.json(results);
@@ -54,7 +54,13 @@ module.exports = function (app) {
     db.User.findAll({
       where: {
         logged: true
-      }
+      },
+
+      // include: [{
+       
+      //   attributes: ['email']
+      // }]
+
     }).then(function (results) {
       res.json(results);
     });

@@ -302,5 +302,15 @@
     {
     	text-decoration: underline;
     }
+    #otherUser
+	{
+		color:#b4b4b4 !important;
+		
+	}
+	#currentUser
+	{
+		color:#b4b4b4 !important;
+		
+	}
     
     

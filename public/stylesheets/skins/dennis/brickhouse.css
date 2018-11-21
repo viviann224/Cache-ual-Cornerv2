@@ -242,6 +242,11 @@ src: url("/fonts/drip.ttf")
 		color:#555555 !important;
 		
 	}
+	#currentUser
+	{
+		color:blue !important;
+		
+	}
 	#userName
 	{
 		text-transform: capitalize;
