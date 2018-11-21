@@ -1,4 +1,9 @@
 $(function () {
+  if(!localStorage.getItem("Cache-ual-Corner"))
+  {
+    $("#chatInput").hide();
+    $("#logout").hide();
+  }
 
   //socket gets created 
   var socket = io();
