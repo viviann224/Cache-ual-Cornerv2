@@ -10,7 +10,7 @@ module.exports = function (app) {
       attributes: ['chat_messages', 'chat_time'],
       include: [{
         model: db.User,
-        attributes: ['userName', 'message_color', 'avatar_image']
+        attributes: ['userName', 'message_color', 'avatar_image','email']
       }],
       order: [
         ['id', 'DESC']

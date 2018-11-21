@@ -1,7 +1,14 @@
 /*chat room styling*/
 	
 /*html elements*/
-
+@font-face {
+	font-family: "glamourgirl";
+	src: url("/../../fonts/levibrush.TTF");	
+}
+@font-face {
+		font-family: "chatfont";
+		src: url("/../../fonts/Roboto-Italic.TTF");
+}
 @font-face {
 font-family: "battle";
 src: url("/fonts/battle.ttf")
@@ -23,8 +30,15 @@ src: url("/fonts/drip.ttf")
 	body {
 		min-height: 100vh;
 		font-size: 15px;
-		background-image:url("/img/brickGray.png");
+		color: #cbced9;
+		/*background-image:url("/img/brickGray.png");*/
 	}
+/*	.pvw-title span {
+  display: none;
+}
+.pvw-title:after {
+  content: 'whatever it is you want to add';
+}*/
 
 /*modal*/
 	.modal {
@@ -83,6 +97,7 @@ src: url("/fonts/drip.ttf")
 	.chatElement {
 		padding: 1em;
 		overflow: auto;
+
 	}
 
 	#header {
@@ -99,13 +114,24 @@ src: url("/fonts/drip.ttf")
 
 	#sideBar {
 		grid-area: sidebar;
+		border-radius: 10px 10px;
+		margin:10px;
+		background: rgba(0,0,0,0.1);
+		border: solid 2px #444649;
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2), 0 0px 0px 0 rgba(0,0,0,0.1);
+	}
+
+	h2:before {
+		content: "Online ";
 	}
 
 	#chatArea {
+		margin:20px 20px 0px 20px;
 		grid-area: chatarea;
-		border: 2px solid #000;
+		border: 2px solid #444649;
+		box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.1);
 		margin-right: 10px;
-		background:rgba(0,0,0,0.5);
+		background:rgba(0,0,0,0.1);
 		z-index: 2;
 		
 	}
@@ -115,6 +141,8 @@ src: url("/fonts/drip.ttf")
 		line-height: 1.25em;
 		z-index: -15;
 	}
+
+
 
 	#userArea {
 		grid-area: userarea;
@@ -156,8 +184,9 @@ src: url("/fonts/drip.ttf")
 	}
 
 	input[type="text"] {
-        background:rgba(0,0,0,0.3);
-        border: solid 5px #000;
+        background:rgba(0,0,0,0.1);
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.1);
+        border: solid 2px #444649;
         font-family: chatfont, "Open Sans", sans-serif;
         font-size: 2em;
         letter-spacing: 2px;
@@ -167,23 +196,24 @@ src: url("/fonts/drip.ttf")
 
     button {
         background: rgba(0,0,0,0);
-        border: solid 5px #000;
+        border: solid 2px #444649;
+        box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2), 0 2px 10px 0 rgba(0,0,0,0.1);
         font-family: chatfont, "Open Sans", sans-serif;
         font-size: 2em;
         color: #000;
     }
 
     button:hover {
-    	background: rgba(0,0,0,0.3);
+    	background: rgba(0,0,0,0.1);
     }
 
 /*font styles*/
 
 
 	h1 {
-		font-size: 3em;
+		font-size: 5em;
 		color: rgba(0,0,0,0);
-		font-family: "battle";
+		font-family: "glamourgirl","Open Sans", sans-serif;
 		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 		
 	}
@@ -191,42 +221,68 @@ src: url("/fonts/drip.ttf")
 	h2 {
 		font-size: 2em;
 		color: rgba(0,0,0,0);
-		font-family: "battle";
+		font-family: "glamourgirl","Open Sans", sans-serif;
 		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 
 	}
 
 	h3 {
-		font-size: 1.5em;
-		color: rgba(0,0,0,0);
-		font-family: "battle";
-		text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
+		/*text-transform: capitalize;*/
+		font-size: 1.2em;
+		color: #0000ff;
+		font-family: arial;
+		font-weight: bold;
+		letter-spacing: -.1em;
+		/*text-align:left;*/
+		/*text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
+	*/
+	}
+	#otherUser
+	{
+		color:#555555 !important;
+		
+	}
+	#userName
+	{
+		text-transform: capitalize;
+		color:#000000 !important;
+		
 	}
 
 	h6 {
-		font-family: "decade";
-		font-size: 1.25em;
+		font-family: arial;
+		font-size: 1em;
 		text-shadow: 2px 2px 4px #555555;
-		color: 	hsl(0, 100%, 30%);
+		color: rgba(0,0,0,0);
+		/*text-align: right;*/
+
 	}
 
 	#chatArea h6 {
-		color: #fff;
-		text-shadow: 2px 2px 6px #000;
+		color: #0000ff;
+		/*text-shadow: 2px 2px 6px #000;*/
+		font-weight: bold;
 	}
 
 	p{
 		font-family: "decade";
 		margin-top: 0.5em;
-		font-size: 1.2em;
+		font-size: 1em;
 		letter-spacing: 1px;
 		text-shadow: 2px 2px 4px #000;
 		font-family: chatfont, "Open Sans", sans-serif;
 	}
 
 	li {
+		list-style-image: url('/../../img/flowerlogo.png');
 		text-shadow: 2px 2px 4px #555555;
 		font-size: 1.5em;
 		text-transform: capitalize;
+		font-weight: bold;
+		font-family: Roboto, "Open Sans", sans-serif;
 	}
+
+/*	li#sideBar {
+list-style-image: url('/../../img/flowerlogo.png');
+}*/
 

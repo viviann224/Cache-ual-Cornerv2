@@ -267,7 +267,7 @@ body
 /*font styles*/
 
 	h1 {
-		font-size: 3em;
+		font-size: 4em;
 		color:white;
 		font-family: "glamourgirl";
     	text-shadow: 2px 2px 4px #000000;
@@ -326,6 +326,7 @@ body
 
 }
 
+
 a:hover {
   text-decoration: underline;
   color: #f6dfd3  !important;
@@ -340,4 +341,8 @@ a:visited {
 	font-family: "chatfont";
   	color: #b55050;
 
+}
+#header:hover
+{
+	text-decoration: none !important;
 }

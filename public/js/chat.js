@@ -75,8 +75,14 @@ $(function () {
 
 // Make a get request to our api route that will return every chat
 $.get("/api/all", function (data) {
-  for (var i = 0; i < data.length; i++) {
-    $('#chatMessages').prepend("<div class='chatMessage'><img src='" + data[i].User.avatar_image +"' /><div><h3>" + data[i].User.userName + ": </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p><h6>" + moment(data[i].chat_time).format('h:mm a') + "</h6></div></div>");
+  for (var i = 0; i < data.length; i++) 
+  {
+    console.log(localStorage.getItem("Cache-ual-Corner")+ " "+data[i].User.email)
+    if(localStorage.getItem("Cache-ual-Corner")!=data[i].User.email)
+    { $('#chatMessages').prepend("<div class='chatMessage'><img src='" + data[i].User.avatar_image +"' /><div><h3 id='otherUser'>" + data[i].User.userName + " ("+ moment(data[i].chat_time).format('h:mm a') + "): </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p></div></div>");}
+  else
+    { 
+      $('#chatMessages').prepend("<div class='chatMessage'><img src='" + data[i].User.avatar_image +"' /><div><h3>" + data[i].User.userName +" ("+moment(data[i].chat_time).format('h:mm a') +  "): </h3><p style='color:" + data[i].User.message_color + "'>" + data[i].chat_messages + "</p></div></div>")}
   }
 });
 
@@ -94,6 +100,8 @@ $.get("/api/users", function (data) {
     {
       $("#userName").text(data.userName);
       $("#userAvatar").attr("src", data.avatar_image);
+
+      
     }
     else
     {
