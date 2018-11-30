@@ -7,7 +7,7 @@
 }
 @font-face {
 		font-family: "chatfont";
-		src: url("/../../fonts/Roboto-Italic.TTF");
+		src: url("/../../fonts/Roboto-Italic.ttf");
 }
 @font-face {
 font-family: "battle";
@@ -20,7 +20,7 @@ src: url("/fonts/drip.ttf")
 }
 @font-face {
 		font-family: "chatfont";
-		src: url("/../../fonts/Roboto-LightItalic.TTF");
+		src: url("/../../fonts/Roboto-LightItalic.ttf");
 }
 
 	html {

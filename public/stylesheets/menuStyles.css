@@ -1,11 +1,11 @@
 @font-face {
 		font-family: "chatusername";
-		src: url("/../../fonts/Roboto-BoldItalic.TTF");
+		src: url("/../../fonts/Roboto-BoldItalic.ttf");
 }
 
 @font-face {
 		font-family: "chatfont";
-		src: url("/../../fonts/Roboto-LightItalic.TTF");
+		src: url("/../../fonts/Roboto-LightItalic.ttf");
 }
 
 /*animated background*/

@@ -6,17 +6,17 @@
 /*added font*/
 @font-face {
 	font-family: "glamourgirl";
-	src: url("/../../fonts/PlayfairDisplay-BoldItalic.TTF");	
+	src: url("/../../fonts/PlayfairDisplay-BoldItalic.ttf");	
 }
 
 @font-face {
 		font-family: "chatfont";
-		src: url("/../../fonts/Roboto-LightItalic.TTF");
+		src: url("/../../fonts/Roboto-LightItalic.ttf");
 }
 
 @font-face {
 		font-family: "chatusername";
-		src: url("/../../fonts/Roboto-MediumItalic.TTF");
+		src: url("/../../fonts/Roboto-MediumItalic.ttf");
 }
 
 body
