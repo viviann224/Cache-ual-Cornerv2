@@ -297,11 +297,14 @@
 	}
 
 	button:hover, #m:hover, a:hover {
-    	background: #0a6225;
+    	color: #198426;
+    	opacity: 0.7;
+
     }
     #logout:hover
     {
     	text-decoration: underline;
+
     }
     #otherUser
 	{
@@ -318,5 +321,19 @@
 	{
 		text-transform: capitalize;
 	}
+
+	.modal-body
+	{
+		color: gray;
+	}
+	.modal-footer
+	{	color: gray;}
     
+    a.logFooter, a.logFooter:visited
+    {
+    	font-weight:bold !important;
+    	color:#27462a;
+    }
+    a.logFooter:hover
+    {	font-weight: bold !important}
     

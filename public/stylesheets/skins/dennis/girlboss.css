@@ -120,6 +120,12 @@ body
 		flex-direction: column;
 		justify-content: space-around;
 		background: cyan;
+
+	}
+
+	.modal-body
+	{
+		padding:20px 5px;
 	}
 
 /*chat container*/
@@ -273,6 +279,10 @@ body
     	text-shadow: 2px 2px 4px #000000;
 
 	}
+	h1:#modal-header
+	{
+		color: #000000;
+	}
 
 	h2 {
 		font-size: 2em;
@@ -357,3 +367,7 @@ a:visited {
 	color:#b4b4b4 !important;
 	
 }
+.logFooter
+	{	color: gray;}
+    
+

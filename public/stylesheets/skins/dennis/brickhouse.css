@@ -81,6 +81,7 @@ src: url("/fonts/drip.ttf")
 		background: cyan;
 	}
 
+
 /*chat container*/
 	.chatWrapper {
 		min-height: 100vh;
@@ -240,6 +241,7 @@ src: url("/fonts/drip.ttf")
 		/*text-shadow: -1px -1px 1px #800080, 1px 1px 1px #ffff00, 5px 5px 3px #80FF00;
 	*/
 	}
+
 	#otherUser
 	{
 		color:#555555 !important;
@@ -278,7 +280,9 @@ src: url("/fonts/drip.ttf")
 		margin-top: 0.5em;
 		font-size: 1em;
 		letter-spacing: 1px;
-		text-shadow: 2px 2px 4px #000;
+		text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px gray;
+		/*text-shadow: 0 0 3px #000000;*/
+		/*text-shadow: 2px 2px 4px #000;*/
 		font-family: chatfont, "Open Sans", sans-serif;
 	}
 
@@ -305,7 +309,7 @@ src: url("/fonts/drip.ttf")
 	
 	#logout:hover, a:hover {
 	  font-weight: bold;
-	  color: #08f705 ;
+	  color: #019d13 ;
 	}
 
 /*	li#sideBar {
