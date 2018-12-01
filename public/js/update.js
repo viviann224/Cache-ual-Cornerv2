@@ -1,7 +1,8 @@
 $( document ).ready(function() {
 
-	var avatarArr=["../img/avatar/avatar01.jpg","../img/avatar/avatar02.jpg","../img/avatar/avatar03.jpg", "../img/avatar/avatar04.jpg", "../img/avatar/avatar05.jpg", "../img/avatar/avatar11.jpg"];
+	var avatarArr=["../img/avatar/avatar01.jpg","../img/avatar/avatar02.jpg","../img/avatar/avatar03.jpg", "../img/avatar/avatar04.jpg", "../img/avatar/avatar06.jpg", "../img/avatar/avatar05.jpg", "../img/avatar/avatar08.jpg", "../img/avatar/avatar11.jpg","../img/avatar/avatar12.jpg"];
 	//var updateName="please sign up to start chatting";
+	//if user is a member go ahead and display update choices
 	if(localStorage.getItem("Cache-ual-Corner"))
 	{	
 		$.get("/api/user/" + localStorage.getItem("Cache-ual-Corner"), function (data) 
@@ -17,7 +18,6 @@ $( document ).ready(function() {
 		    {
 		    	if(data.avatar_image!= avatarArr[i])
 		    	{
-
 		    		var inputField= $('<input>');
 		    		//' type="radio" name="img" checked="checked">';
 		    		inputField.attr("type", "radio");

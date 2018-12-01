@@ -122,7 +122,11 @@ body
 		background: cyan;
 
 	}
-
+	.modal-body p
+	{
+		color: gray;
+		font-size: 1em;
+	}
 	.modal-body
 	{
 		padding:20px 5px;
@@ -246,7 +250,14 @@ body
             padding: 1em;
             width: 50%;
         }
-
+		.links{
+			display:inline;
+			border-radius: .2em;
+			padding:5px;
+			margin:2px;
+			border: solid 1px #FFF;
+			box-shadow: 2px 2px 4px gray;
+		}
         button {
             background: rgba(0,0,0,0);
             border: solid 5px #FFF;

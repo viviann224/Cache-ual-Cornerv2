@@ -328,6 +328,15 @@
 	}
 	.modal-footer
 	{	color: gray;}
+
+	.links{
+		display:inline;
+		border-radius: .2em;
+		padding:5px;
+		margin:2px;
+		border: solid 1px #197f00;
+		box-shadow: 2px 2px 4px #104d01;
+	}
     
     a.logFooter, a.logFooter:visited
     {

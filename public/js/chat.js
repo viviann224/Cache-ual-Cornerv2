@@ -21,6 +21,8 @@ $(function () {
   }
   //$("#instructModal").hide();
 
+
+
   //socket gets created 
   var socket = io();
 
@@ -138,4 +140,22 @@ $.get("/api/users", function (data) {
 
 
     }
+    $('#aboutMod').on("click", function () 
+  {
+    var aboutmodal = document.getElementById('aboutModal');
+
+     aboutmodal.style.display = "block";
+     // Get the <span> element that closes the modal
+    //var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on (x), close the modal
+    $(document).on("click", ".close", function() 
+    { aboutmodal.style.display = "none";});
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) 
+    {
+        if (event.target == aboutmodal) 
+        {    aboutmodal.style.display = "none";}
+    }
+  });
   });
